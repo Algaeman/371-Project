@@ -1,2 +1,2 @@
 # 371-Project
-Repository for our 
+Repository for our game
