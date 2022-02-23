@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Weapon : MonoBehaviour
 {
@@ -9,37 +10,50 @@ public class Weapon : MonoBehaviour
     [SerializeField] Transform _shootPoint;
     [SerializeField] float _delay = 0.2f;
     [SerializeField] float _bulletSpeed = 5f;
+    public string newGameScene; 
+
+
 
     Vector3 _direction;
-    Queue<Bullet> _pool = new Queue<Bullet>();
+    //Queue<Bullet> _pool = new Queue<Bullet>();
 
     // Update is called once per frame
     void Update()
     {
+
+       
+        var gos = GameObject.FindGameObjectsWithTag("Enemy");
+       // Debug.Log(gos.Length);
+
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var raycastHit, Mathf.Infinity))
         {
             _direction = (raycastHit.point - _shootPoint.position).normalized;
             _direction = new Vector3(_direction.x, 0, _direction.z);
             transform.forward = _direction;
         }
-        if (Input.GetButtonDown("Fire1") && CanShoot())
+        if (Input.GetButtonDown("Fire1"))
             Shoot();
+
+    if((gos.Length) == 0){
+    SceneManager.LoadScene(newGameScene);
+    }
+
+        
     }
 
     Bullet GetBullet()
     {
-        if (_pool.Count > 0)
-        {
-            var bullet = _pool.Dequeue();
-            _bulletPrefab.gameObject.SetActive(true);
-            return bullet;
-        }
-        else
-        {
+        //if (_pool.Count > 0)
+        //{
+        //    var bullet = _pool.Dequeue();
+        //    _bulletPrefab.gameObject.SetActive(true);
+        //    return bullet;
+        //}
+        //else
+        //{
             var bullet = Instantiate(_bulletPrefab, _shootPoint.position, _shootPoint.rotation);
-            bullet.SetGun(this);
             return bullet;
-        }
+        //}
     }
 
     void Shoot()
@@ -56,8 +70,8 @@ public class Weapon : MonoBehaviour
         return Time.time >= _nextShootTime;
     }
 
-    public void AddToPool(Bullet bullet)
-    {
-        _pool.Enqueue(bullet);
-    }
+    //public void AddToPool(Bullet bullet)
+    //{
+    //    _pool.Enqueue(bullet);
+    //}
 }
