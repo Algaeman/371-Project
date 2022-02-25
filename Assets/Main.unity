@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -516,6 +516,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 455684790}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2095854737}
@@ -549,7 +557,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104543617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.237377, y: 9.67107, z: -3.9018242}
+  m_LocalPosition: {x: 39.237377, y: 9.25, z: -3.9018242}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 881358454}
@@ -718,11 +726,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4164070437862366, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.94107
+      value: -5.51
       objectReference: {fileID: 0}
     - target: {fileID: 4164070437862366, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.568175
+      value: -17.97
       objectReference: {fileID: 0}
     - target: {fileID: 4164070437862366, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -752,6 +760,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 881358455}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
     - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
       propertyPath: playerTransform
       value: 
@@ -1247,6 +1263,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 1153675981}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
     - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
       propertyPath: playerTransform
       value: 
@@ -2178,26 +2202,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1261967083292032, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_PrefabInstance: {fileID: 683870193}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &442975333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442975332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f6c5e77b7f8714b93a9a03de2de199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 2095854737}
-  agent: {fileID: 442975334}
-  followDistance: 10
-  stopFollowDistance: 30
-  curHealth: 100
-  _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
-  _delay: 0.2
-  _bulletSpeed: 20
 --- !u!195 &442975334
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2343,26 +2347,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &455684791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455684788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f6c5e77b7f8714b93a9a03de2de199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 2095854737}
-  agent: {fileID: 455684790}
-  followDistance: 10
-  stopFollowDistance: 30
-  curHealth: 100
-  _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
-  _delay: 0.2
-  _bulletSpeed: 20
 --- !u!54 &455684792
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2867,26 +2851,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &599694542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 599694539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f6c5e77b7f8714b93a9a03de2de199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 2095854737}
-  agent: {fileID: 599694541}
-  followDistance: 10
-  stopFollowDistance: 30
-  curHealth: 100
-  _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
-  _delay: 0.2
-  _bulletSpeed: 5
 --- !u!65 &599694543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3258,6 +3222,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 442975334}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
     - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
       propertyPath: playerTransform
       value: 
@@ -3925,26 +3897,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &881358456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881358453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f6c5e77b7f8714b93a9a03de2de199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 2095854737}
-  agent: {fileID: 881358455}
-  followDistance: 10
-  stopFollowDistance: 30
-  curHealth: 100
-  _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
-  _delay: 0.2
-  _bulletSpeed: 5
 --- !u!54 &881358457
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4940,26 +4892,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1153675982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1153675979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f6c5e77b7f8714b93a9a03de2de199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 2095854737}
-  agent: {fileID: 1153675981}
-  followDistance: 10
-  stopFollowDistance: 30
-  curHealth: 100
-  _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
-  _delay: 0.2
-  _bulletSpeed: 5
 --- !u!65 &1153675983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6768,6 +6700,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 1624897503}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2095854737}
@@ -6805,26 +6745,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1624897504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624897502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f6c5e77b7f8714b93a9a03de2de199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 2095854737}
-  agent: {fileID: 1624897503}
-  followDistance: 10
-  stopFollowDistance: 30
-  curHealth: 100
-  _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
-  _delay: 0.2
-  _bulletSpeed: 5
 --- !u!65 &1624897505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7572,7 +7492,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.5
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 9c059509d0476054ea7e484f5558fd87, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7937f1af8db63214abae2c3122e9dde3, type: 2}
 --- !u!4 &1846257653
 Transform:
   m_ObjectHideFlags: 0
@@ -8943,6 +8863,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.41
       objectReference: {fileID: 0}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 599694541}
+    - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
     - target: {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
       propertyPath: playerTransform
       value: 

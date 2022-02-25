@@ -1553,7 +1553,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
 --- !u!4 &490201028 stripped
 Transform:
@@ -1603,6 +1604,7 @@ MonoBehaviour:
   agent: {fileID: 490201030}
   followDistance: 10
   stopFollowDistance: 30
+  curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
   _delay: 0.2
   _bulletSpeed: 20
@@ -2843,7 +2845,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
 --- !u!4 &1024091349 stripped
 Transform:
@@ -2871,6 +2874,7 @@ MonoBehaviour:
   agent: {fileID: 1024091352}
   followDistance: 10
   stopFollowDistance: 30
+  curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
   _delay: 0.2
   _bulletSpeed: 20
@@ -4465,7 +4469,8 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 298110301}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
 --- !u!4 &1729011068 stripped
 Transform:
@@ -4493,6 +4498,7 @@ MonoBehaviour:
   agent: {fileID: 1729011071}
   followDistance: 10
   stopFollowDistance: 30
+  curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
   _delay: 0.2
   _bulletSpeed: 5
@@ -5271,7 +5277,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
 --- !u!4 &2032595131 stripped
 Transform:
@@ -5321,6 +5328,7 @@ MonoBehaviour:
   agent: {fileID: 2032595133}
   followDistance: 10
   stopFollowDistance: 30
+  curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
   _delay: 0.2
   _bulletSpeed: 20
