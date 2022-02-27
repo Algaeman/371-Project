@@ -11,6 +11,8 @@ TagManager:
   - PlayerBullet
   - Wormhole1
   - Wormhole2
+  - forcefield
+  - forcefieldinitiator
   layers:
   - Default
   - TransparentFX
