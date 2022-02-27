@@ -29,18 +29,26 @@ public class ForceField : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Collision"); 
-        //Debug.Log("COLLISION: " + collision.transform.tag + gameObject.tag); 
-        
-        if ((collision.transform.tag == "forcefieldinitiator") && (gameObject.tag == "Player"))
+     if ((other.tag == "forcefieldinitiator"))
         {
+            
             forcefield.SetActive(true);
             forcefieldinitator.SetActive(false); 
             timeWhenDisappear = Time.time + timeToAppear;
         
         }
+
+        if ((other.tag == "Bullet") && (forcefield.activeSelf) )
+        {
+            Destroy(other.gameObject);
+        }
+    
+        }
+
+    void OnCollisionEnter(Collision collision)
+    {
 
         if ((collision.transform.tag == "Bullet") && (gameObject.tag == "Player") && (forcefield.activeSelf) )
         {
