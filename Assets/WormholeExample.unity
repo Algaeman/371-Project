@@ -523,7 +523,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
 --- !u!1 &104543617
 GameObject:
@@ -707,6 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 8278076934634495567, guid: 5d0b4b838b5c2fa4493375e7c1cfc215, type: 3}
+  instanexplosion: {fileID: 0}
   _playerControllerCC: {fileID: 2095854730}
 --- !u!1001 &127567169
 PrefabInstance:
@@ -869,7 +871,8 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2095854737}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
 --- !u!1001 &173203053
 PrefabInstance:
@@ -1364,7 +1367,8 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2095854737}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
 --- !u!1001 &273282379
 PrefabInstance:
@@ -3543,7 +3547,8 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2095854737}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
 --- !u!1 &712121241 stripped
 GameObject:
@@ -7171,7 +7176,8 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2095854737}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
 --- !u!4 &1624897501 stripped
 Transform:
@@ -9358,7 +9364,8 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 2095854737}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
 --- !u!1 &2142182313
 GameObject:
