@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 /* Based on Unity documentation for CharacterController.Move */
 
 public class PlayerControllerCC : MonoBehaviour
@@ -74,16 +73,14 @@ public void takeDamage(int damage){
 
 void OnTriggerEnter(Collider other)
     {
-        ForceField p = new ForceField();
-        //if (other.CompareTag("Bullet"))
-        if (other.CompareTag("Bullet") && (p.forcefield.activeSelf == false))
+        if (other.CompareTag("Bullet"))
         {
-            Debug.Log("Hit player");
+            //Debug.Log("Hit player");
             takeDamage(20);
             hb.setHealth(curHealth);
         }
 
-        if (other.CompareTag("Wormhole1"))
+         if (other.CompareTag("Wormhole1"))
         {
          StartCoroutine("TeleportToP2");
         }
