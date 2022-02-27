@@ -54,6 +54,9 @@ EditorBuildSettings:
     path: Assets/TransitionScene11.unity
     guid: eab879b1d828fa74b918fc6504a726fe
   - enabled: 1
+    path: Assets/ForceField.unity
+    guid: 0cfe01db127efab4aa96af02b86f8871
+  - enabled: 1
     path: Assets/EndGame.unity
     guid: 7b3ae83a1c5424e2d9d563d9cb30026b
   m_configObjects: {}
