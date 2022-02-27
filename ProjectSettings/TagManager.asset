@@ -4,25 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - barrier
-  - OutofBoundsMsg
-  - Enemy
-  - Bullet
-  - PlayerBullet
-  - Wormhole1
-  - Wormhole2
+  - Shootable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
+  - 
+  - 
+  - Lighting
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Postprocessing
   - 
   - 
   - 
@@ -45,6 +39,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fire
+    uniqueID: 3804908061
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
