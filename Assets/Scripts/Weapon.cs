@@ -23,10 +23,11 @@ public class Weapon : MonoBehaviour
 
        
         var gos = GameObject.FindGameObjectsWithTag("Enemy");
-       Debug.Log(gos.Length);
+        //Debug.Log(gos.Length);
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var raycastHit, Mathf.Infinity))
         {
+            Debug.Log(raycastHit.point);
             _direction = (raycastHit.point - _shootPoint.position).normalized;
             _direction = new Vector3(_direction.x, 0, _direction.z);
             transform.forward = _direction;

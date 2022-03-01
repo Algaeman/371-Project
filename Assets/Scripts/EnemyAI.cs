@@ -161,7 +161,7 @@ void OnTriggerEnter (Collider other)
      if (other.CompareTag("PlayerBullet"))
         {
             takeDamage(20);
-            if(curHealth < 0){
+            if(curHealth <= 0) {
                 Destroy(gameObject);
             }
             
