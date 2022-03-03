@@ -3,8 +3,9 @@ using UnityEngine.AI;
 
 public class GuidedMissle : MonoBehaviour
 {
-    [SerializeField] GameObject target;
-    [SerializeField] float timeTracking;
+    // Note: using public, not serializefield, so can access in missilespawner script
+    public GameObject target;
+    public float timeTracking;
 
     NavMeshAgent _navMeshAgent;
     Rigidbody _rigidbody;
