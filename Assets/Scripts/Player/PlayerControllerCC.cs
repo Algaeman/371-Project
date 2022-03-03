@@ -20,10 +20,15 @@ public class PlayerControllerCC : MonoBehaviour
     Vector3 _moveDirection = Vector3.zero;
     float _gravityDownBoost = 2;
 
+    public ParticleSystem explosion;
+    
+
     void Start(){
+    explosion.Stop();
     _characterController = GetComponent<CharacterController>();
     curHealth = maxHealth;
     hb.setMaxHealth(maxHealth);
+   
     }
 
     void Update()
@@ -75,9 +80,13 @@ void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Bullet"))
         {
-            //Debug.Log("Hit player");
-            takeDamage(20);
-            hb.setHealth(curHealth);
+        
+        Destroy(other);
+        takeDamage(20);
+        hb.setHealth(curHealth);
+        explosion.Play();
+        StartCoroutine("waitForExplosion");
+       
         }
 
          if (other.CompareTag("Wormhole1"))
@@ -106,5 +115,11 @@ void OnTriggerEnter(Collider other)
     gameObject.transform.position  = wormholePos1;
     yield return new WaitForSeconds(0.1f);
     _characterController.enabled = true;
+}
+
+
+   private IEnumerator waitForExplosion(){
+    yield return new WaitForSeconds(.25f);
+    explosion.Stop();
 }
 }
