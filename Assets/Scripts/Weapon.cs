@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
 
        
         var gos = GameObject.FindGameObjectsWithTag("Enemy");
-       //Debug.Log(gos.Length);
+       Debug.Log(gos.Length);
 
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var raycastHit, Mathf.Infinity))
         {

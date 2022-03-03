@@ -28,7 +28,6 @@ public class Mine : MonoBehaviour
 }
 
    private IEnumerator waitForExplosion(){
-    //Debug.Log("here");
     yield return new WaitForSeconds(2f);
     instanexplosion.SetActive(false);
 }
