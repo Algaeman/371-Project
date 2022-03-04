@@ -89,6 +89,17 @@ void OnTriggerEnter(Collider other)
        
         }
 
+        if (other.CompareTag("Mine"))
+        {
+        Debug.Log(other.gameObject);
+        Destroy(other.gameObject);
+        takeDamage(50);
+         hb.setHealth(curHealth);
+        explosion.Play();
+        StartCoroutine("waitForExplosion");
+       
+        }
+
          if (other.CompareTag("Wormhole1"))
         {
          StartCoroutine("TeleportToP2");
