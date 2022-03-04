@@ -110,6 +110,15 @@ void OnTriggerEnter(Collider other)
         {
          StartCoroutine("TeleportToP1");
         }
+
+        if (other.CompareTag("Missile"))
+        {
+            Debug.Log("Missile hit player.");
+            takeDamage(10);
+            hb.setHealth(curHealth);
+            explosion.Play();
+            StartCoroutine("waitForExplosion");
+        }
     }
 
     IEnumerator TeleportToP2(){
