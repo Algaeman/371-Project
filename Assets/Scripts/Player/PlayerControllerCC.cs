@@ -78,12 +78,23 @@ public void takeDamage(int damage){
 
 void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet") || other.CompareTag("BossBullet"))
         {
         
         Destroy(other);
         takeDamage(20);
         hb.setHealth(curHealth);
+        explosion.Play();
+        StartCoroutine("waitForExplosion");
+       
+        }
+
+        if (other.CompareTag("Mine"))
+        {
+        Debug.Log(other.gameObject);
+        Destroy(other.gameObject);
+        takeDamage(50);
+         hb.setHealth(curHealth);
         explosion.Play();
         StartCoroutine("waitForExplosion");
        

@@ -4,9 +4,9 @@ public class MissileSpawner : MonoBehaviour
 {
     [SerializeField] GameObject target;
     [SerializeField] GameObject missilePrefab;
-    [SerializeField] float timeTracking;
-    [SerializeField] float spawnRate;
-    [SerializeField] float spawnNumber;
+    public float timeTracking;
+    public float spawnRate;
+    public float spawnNumber;
     [SerializeField] float spawnDistance;
     [SerializeField] Transform spawnPoint;
 
