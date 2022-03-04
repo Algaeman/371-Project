@@ -9427,6 +9427,26 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2095854728}
+    - target: {fileID: 349806268, guid: 1a18a95e5c57c03449cd301ff9d3c354, type: 3}
+      propertyPath: health
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 349806268, guid: 1a18a95e5c57c03449cd301ff9d3c354, type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 2062240906048206039, guid: 5d0b4b838b5c2fa4493375e7c1cfc215, type: 3}
+    - target: {fileID: 1070890032, guid: 1a18a95e5c57c03449cd301ff9d3c354, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070890033, guid: 1a18a95e5c57c03449cd301ff9d3c354, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070890034, guid: 1a18a95e5c57c03449cd301ff9d3c354, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2032132239, guid: 1a18a95e5c57c03449cd301ff9d3c354, type: 3}
       propertyPath: target
       value: 

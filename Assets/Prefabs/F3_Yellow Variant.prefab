@@ -375,7 +375,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5641596298619072267}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 6.76
   m_Height: 58.8
@@ -389,7 +389,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5641596298619072267}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 6.76
   m_Height: 58.8
@@ -403,7 +403,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5641596298619072267}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 27.7, y: 11.6, z: 99.4}
@@ -436,11 +436,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36515db4b614ce547b41622cf6d839c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 10000
   farLeftTurret: {fileID: 354779044}
   leftTurret: {fileID: 361041977}
   farRightTurret: {fileID: 560478685}
   rightTurret: {fileID: 639530027}
   rightMissileSpawner: {fileID: 2032132239}
   leftMissileSpawner: {fileID: 93358428}
-  explosion: {fileID: 0}
+  explosion: {fileID: 2062240906048206039, guid: 5d0b4b838b5c2fa4493375e7c1cfc215, type: 3}
