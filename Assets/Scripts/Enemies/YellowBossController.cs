@@ -12,6 +12,7 @@ public class YellowBossController : MonoBehaviour
     [SerializeField] YellowBossShooting rightTurret;
     [SerializeField] MissileSpawner rightMissileSpawner;
     [SerializeField] MissileSpawner leftMissileSpawner;
+    [SerializeField] ParticleSystem explosion;
 
     float _fullHealth;
 
@@ -24,7 +25,7 @@ public class YellowBossController : MonoBehaviour
     void Start()
     {
         _fullHealth = health;
-        
+
         // Make all weapons inactive
         farLeftTurret.gameObject.SetActive(false);
         leftTurret.gameObject.SetActive(false);
@@ -36,7 +37,7 @@ public class YellowBossController : MonoBehaviour
     void Update()
     {
         health -= Time.deltaTime;
-        
+
         if (health > 0.75 * _fullHealth)
         {
             if (_initHealthyPhase)
@@ -67,7 +68,6 @@ public class YellowBossController : MonoBehaviour
             {
                 StartDyingBehavior();
                 _initDyingPhase = false;
-
             }
         }
     }
@@ -84,7 +84,7 @@ public class YellowBossController : MonoBehaviour
     {
         rightTurret.gameObject.SetActive(true);
         leftTurret.gameObject.SetActive(true);
-        
+
         // Increase Missiles
         rightMissileSpawner.spawnNumber += 1;
         rightMissileSpawner.timeTracking += 2;
@@ -103,7 +103,7 @@ public class YellowBossController : MonoBehaviour
         leftTurret.shootingDelay *= 0.6f;
         farRightTurret.bulletSpeed += 2;
         farLeftTurret.shootingDelay *= 0.6f;
-        
+
         // Increase Missiles
         rightMissileSpawner.spawnRate *= 0.8f;
         leftMissileSpawner.spawnRate -= 0.8f;
@@ -120,12 +120,36 @@ public class YellowBossController : MonoBehaviour
         leftTurret.shootingDelay *= 0.6f;
         farRightTurret.bulletSpeed += 2;
         farLeftTurret.shootingDelay *= 0.6f;
-        
+
         // Increase Missiles
         rightMissileSpawner.spawnNumber += 1;
         rightMissileSpawner.timeTracking += 2;
         rightMissileSpawner.spawnRate *= 0.6f;
         leftMissileSpawner.spawnNumber += 1;
         leftMissileSpawner.timeTracking += 2;
-     }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PlayerBullet"))
+        {
+            HandleDamageCollision(20, other.gameObject.transform.position);
+        }
+    }
+
+    void HandleDamageCollision(int damage, Vector3 position)
+    {
+        health -= damage;
+        //  Healthbar for Boss?  hb.setHealth(health);
+        ParticleSystem ps = Instantiate(explosion, position, Quaternion.identity);
+        ps.Play();
+        StartCoroutine(waitForExplosion(ps));
+        if( health < 0 ) Destroy(gameObject);
+    }
+
+    private IEnumerator waitForExplosion(ParticleSystem ps)
+    {
+        yield return new WaitForSeconds(.25f);
+        ps.Stop();
+    }
 }
