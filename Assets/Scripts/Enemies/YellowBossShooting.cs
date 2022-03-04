@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class YellowBossShooting : MonoBehaviour
@@ -26,6 +24,9 @@ public class YellowBossShooting : MonoBehaviour
             _shootingTimer = shootingDelay;
             var bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
+            
+            var angle = Mathf.PingPong(Time.time, 10) - 5;
+            transform.Rotate(Vector3.up, angle);
         }
     }
 }

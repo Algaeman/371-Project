@@ -14,6 +14,8 @@ TagManager:
   - forcefield
   - forcefieldinitiator
   - Mine
+  - BossBullet
+  - Missile
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - EnemyBullet
   - 
   - 
   - 

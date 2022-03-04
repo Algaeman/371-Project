@@ -105,12 +105,8 @@ public class YellowBossController : MonoBehaviour
         farLeftTurret.shootingDelay *= 0.6f;
         
         // Increase Missiles
-        rightMissileSpawner.spawnNumber += 1;
-        rightMissileSpawner.timeTracking += 2;
-        rightMissileSpawner.spawnRate *= 0.6f;
-        leftMissileSpawner.spawnNumber += 1;
-        leftMissileSpawner.timeTracking += 2;
-        leftMissileSpawner.spawnRate -= 0.6f;
+        rightMissileSpawner.spawnRate *= 0.8f;
+        leftMissileSpawner.spawnRate -= 0.8f;
     }
 
     void StartDyingBehavior()

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1924874200}
   - component: {fileID: 1924874199}
   - component: {fileID: 1924874198}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 5895104308006092453}
   - component: {fileID: 5895104308006092452}
   - component: {fileID: 5895104308006092451}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Missle Exhaust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4912,9 +4912,9 @@ GameObject:
   - component: {fileID: 5895104307018890492}
   - component: {fileID: 5895104307018890490}
   - component: {fileID: 5895104307018890491}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PfCruiseMissile
-  m_TagString: Untagged
+  m_TagString: Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5014,6 +5014,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e494807fe98891c4dba63bd86cc64aea, type: 2}
+    - target: {fileID: -4369887415061721944, guid: 4ab581e06f3b88042b9154887d4c359e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4ab581e06f3b88042b9154887d4c359e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5062,9 +5066,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e494807fe98891c4dba63bd86cc64aea, type: 2}
+    - target: {fileID: -1818842609758388285, guid: 4ab581e06f3b88042b9154887d4c359e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1568803400689042508, guid: 4ab581e06f3b88042b9154887d4c359e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 4ab581e06f3b88042b9154887d4c359e, type: 3}
       propertyPath: m_Name
       value: CruiseMissile
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4ab581e06f3b88042b9154887d4c359e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 631342636281883952, guid: 4ab581e06f3b88042b9154887d4c359e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5575115065722428287, guid: 4ab581e06f3b88042b9154887d4c359e, type: 3}
       propertyPath: m_Materials.Array.data[0]

@@ -78,7 +78,7 @@ public void takeDamage(int damage){
 
 void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet") || other.CompareTag("BossBullet"))
         {
         
         Destroy(other);
