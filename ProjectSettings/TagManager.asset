@@ -11,6 +11,11 @@ TagManager:
   - PlayerBullet
   - Wormhole1
   - Wormhole2
+  - forcefield
+  - forcefieldinitiator
+  - Mine
+  - BossBullet
+  - Missile
   layers:
   - Default
   - TransparentFX
@@ -19,7 +24,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - EnemyBullet
   - 
   - 
   - 

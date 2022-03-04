@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 8012430498647367311}
   - component: {fileID: 8012430498648333391}
   - component: {fileID: 8012430498646426668}
-  - component: {fileID: 8012430498646426669}
   m_Layer: 0
   m_Name: Mine
-  m_TagString: Untagged
+  m_TagString: Mine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,18 +96,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.326142, y: 0.09444399, z: 0.367784}
   m_Center: {x: 0, y: 0.0012139995, z: -0.010956988}
---- !u!114 &8012430498646426669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8012430498646327951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d1d7866c92ee147a776c5ac5e34b80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosion: {fileID: 8278076934634495567, guid: dd83ad1a3e41cd346a47a6707b4a8da6, type: 3}
-  instanexplosion: {fileID: 0}
-  _playerControllerCC: {fileID: 0}

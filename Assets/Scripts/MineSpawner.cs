@@ -6,15 +6,16 @@ public class MineSpawner : MonoBehaviour
 {
 
    [SerializeField] GameObject _mineprefab;
-    [SerializeField] float _delay = 10f;
+   
 
-    public float _fireRate = 3f;
+    public float _fireRate = 20f;
     private float _nextFire = 0f;
 
     // Update is called once per frame
     void Update()
     {
-           Attack();         
+           Attack(); 
+           Debug.Log(_nextFire);        
     }
 
    void placeMine()
@@ -28,7 +29,7 @@ public class MineSpawner : MonoBehaviour
         if (Time.time > _nextFire)
         {
             _nextFire = Time.time + _fireRate;
-             Debug.Log("In here"); 
+            Debug.Log("In here"); 
             placeMine();
         }
     }
