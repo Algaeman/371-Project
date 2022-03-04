@@ -70,7 +70,7 @@ if (_characterController.isGrounded)
 
 // move direction directly from axes 
 
-_moveDirection = new Vector3(Input.GetAxis("Verticle"), 0.0f, Input.GetAxis("Horizontal")); 
+_moveDirection = new Vector3(Input.GetAxis("Vertical"), 0.0f, Input.GetAxis("Horizontal")); 
 
 _moveDirection *= _speed; 
 
