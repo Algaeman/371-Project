@@ -8766,6 +8766,8 @@ MonoBehaviour:
   missilePrefab: {fileID: 7433164220213647431, guid: 2e3ca3576dc74d2488f5ac8db78248ba, type: 3}
   timeTracking: 8
   spawnRate: 5
+  spawnNumber: 3
+  spawnDistance: 3
   spawnPoint: {fileID: 52852847}
 --- !u!1 &1974629430 stripped
 GameObject:

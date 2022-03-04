@@ -6,6 +6,7 @@ public class GuidedMissle : MonoBehaviour
     // Note: using public, not serializefield, so can access in missilespawner script
     public GameObject target;
     public float timeTracking;
+    [SerializeField] GameObject forceField;
 
     NavMeshAgent _navMeshAgent;
     Rigidbody _rigidbody;
@@ -35,6 +36,9 @@ public class GuidedMissle : MonoBehaviour
                 _navMeshAgent.enabled = false;
                 _rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionY;
                 
+                // Lose force field protection
+                Destroy(forceField);
+
                 // Go fast in current direction
                 _rigidbody.velocity = transform.forward * _navMeshAgent.speed * 2f;
             }
