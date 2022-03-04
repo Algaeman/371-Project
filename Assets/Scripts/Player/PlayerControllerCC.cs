@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 /* Based on Unity documentation for CharacterController.Move */
 
@@ -72,8 +74,10 @@ public class PlayerControllerCC : MonoBehaviour
     }
 
 public void takeDamage(int damage){
-    curHealth -= damage; 
+    curHealth -= damage;
+        Debug.Log(curHealth);
 }
+
 
 
 void OnTriggerEnter(Collider other)
@@ -84,7 +88,13 @@ void OnTriggerEnter(Collider other)
         Destroy(other);
         takeDamage(20);
         hb.setHealth(curHealth);
-        explosion.Play();
+            //player death
+            //this condition is to be changed to when # of lives reaches 0, and current condition is to be moved to a "loseLife" method
+            if (curHealth <= 0)
+            {
+                Debug.Log("die now");
+            SceneManager.LoadScene(17);
+                explosion.Play(); }
         StartCoroutine("waitForExplosion");
        
         }
