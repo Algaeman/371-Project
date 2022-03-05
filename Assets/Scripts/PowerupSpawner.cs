@@ -8,17 +8,11 @@ public class PowerupSpawner : MonoBehaviour
     //Populate with points, each a different spawn location for the powerups (will be per level)
     public List<Vector3> points;
     // Start is called before the first frame update
-    public GameObject immunityPowerup;
-    public GameObject healthPowerup;
-    public GameObject attackSpeedPowerup;
     public List<GameObject> powerups;
     private float time; 
     void Start()
     {
-        time = Time.time;
-        powerups.Add(immunityPowerup);
-        powerups.Add(attackSpeedPowerup);
-        powerups.Add(healthPowerup);        
+        time = Time.time;       
     }
 
     // Update is called once per frame
@@ -26,8 +20,8 @@ public class PowerupSpawner : MonoBehaviour
     {
         if((Time.time - time) > 7.0f && powerupSpawned == false)
         {
-            int pointIndex = Random.Range(0, points.Count - 1);
-            int powerupIndex = Random.Range(0, powerups.Count - 1);
+            int pointIndex = Random.Range(0, points.Count);
+            int powerupIndex = Random.Range(0, powerups.Count);
             powerupSpawned = true;
             Instantiate(powerups[powerupIndex], points[pointIndex], Quaternion.identity);
             time = Time.time;

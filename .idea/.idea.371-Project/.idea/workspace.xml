@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd11190c-a493-4c8f-8360-70305bdb2be8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/PfCruiseMissile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/PfCruiseMissile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/GuidedMissle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/GuidedMissle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/MissileSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/MissileSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.371-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.371-Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/F3_Yellow Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/F3_Yellow Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MissileShip.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MissileShip.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerCC.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerCC.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/HaungsTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HaungsTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/MissileShipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/MissileShipController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/YellowBossController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/YellowBossController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +68,7 @@
       <updated>1646323362877</updated>
       <workItem from="1646323370997" duration="5664000" />
       <workItem from="1646333705798" duration="4244000" />
+      <workItem from="1646418956328" duration="8258000" />
     </task>
     <servers />
   </component>

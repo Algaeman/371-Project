@@ -47,7 +47,7 @@ public class GuidedMissle : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Missle hit something: " + collision.gameObject.tag);
+        //Debug.Log("Missle hit something: " + collision.gameObject.tag);
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
