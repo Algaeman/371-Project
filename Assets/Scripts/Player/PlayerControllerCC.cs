@@ -19,6 +19,7 @@ public class PlayerControllerCC : MonoBehaviour
     public string powerUp = "none";
     public Countdown countdown;
     public PowerupSpawner powerupSpawner;
+    public AudioSource laserAudio;
 
     CharacterController _characterController;
     Vector3 _moveDirection = Vector3.zero;
@@ -78,8 +79,6 @@ public class PlayerControllerCC : MonoBehaviour
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var mouseHit, Mathf.Infinity);
             Vector3 direction = new Vector3(mouseHit.point.x, shootPoint.position.y ,mouseHit.point.z) - shootPoint.position;
             Physics.Raycast(shootPoint.position, direction, out var raycastHit, Mathf.Infinity);
-            // Debug.Log(shootPoint.position);
-            // Debug.Log(hit.point);
             laser.SetPosition(0, shootPoint.position);
             laser.SetPosition(1, new Vector3(raycastHit.point.x, shootPoint.position.y, raycastHit.point.z));
             if(raycastHit.collider.gameObject.CompareTag("Enemy"))
@@ -87,6 +86,7 @@ public class PlayerControllerCC : MonoBehaviour
                 EnemyAI enemy = raycastHit.collider.gameObject.GetComponent<EnemyAI>();
                 enemy.takeDamage(1);
             }
+            
         }
     }
     public void takeDamage(int damage)
@@ -159,8 +159,9 @@ public class PlayerControllerCC : MonoBehaviour
             powerUp = other.name;
             laserActivated = true;
             laser.gameObject.SetActive(true);
+            laserAudio.gameObject.SetActive(true);
             Destroy(other);
-            powerupSpawner.powerupSpawned = false;
+            //powerupSpawner.powerupSpawned = false;
         }
     }
 
