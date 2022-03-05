@@ -4281,6 +4281,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.68
       objectReference: {fileID: 0}
+    - target: {fileID: 2095854735, guid: 728692919ab519a40a7232f6acd1064f, type: 3}
+      propertyPath: gameoverPanel
+      value: 
+      objectReference: {fileID: 1847975494}
     - target: {fileID: 8104880442362333891, guid: 728692919ab519a40a7232f6acd1064f, type: 3}
       propertyPath: m_RootOrder
       value: 5
