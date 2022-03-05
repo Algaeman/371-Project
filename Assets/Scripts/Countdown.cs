@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Countdown : MonoBehaviour
 {
     [SerializeField] Image gas;
-    [SerializeField] float duration;
-    [SerializeField] float currentTime;
+    [SerializeField] public float duration;
+    [SerializeField] public float currentTime;
     // Start is called before the first frame update
     void Start()
     {
