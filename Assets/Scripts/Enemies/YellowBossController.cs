@@ -13,6 +13,7 @@ public class YellowBossController : MonoBehaviour
     [SerializeField] MissileSpawner rightMissileSpawner;
     [SerializeField] MissileSpawner leftMissileSpawner;
     [SerializeField] ParticleSystem explosion;
+    [SerializeField] GameObject forceField;
 
     float _fullHealth;
 
@@ -70,6 +71,7 @@ public class YellowBossController : MonoBehaviour
                 _initDyingPhase = false;
             }
         }
+        
     }
 
     void StartHealthyBehavior()
@@ -90,6 +92,8 @@ public class YellowBossController : MonoBehaviour
         rightMissileSpawner.timeTracking += 2;
         leftMissileSpawner.spawnNumber += 1;
         leftMissileSpawner.timeTracking += 2;
+        
+        StartCoroutine(BecomeInvulnerable());
     }
 
     void StartDesperateBehavior()
@@ -107,6 +111,8 @@ public class YellowBossController : MonoBehaviour
         // Increase Missiles
         rightMissileSpawner.spawnRate *= 0.8f;
         leftMissileSpawner.spawnRate -= 0.8f;
+
+        StartCoroutine(BecomeInvulnerable());
     }
 
     void StartDyingBehavior()
@@ -129,6 +135,13 @@ public class YellowBossController : MonoBehaviour
         leftMissileSpawner.timeTracking += 2;
     }
 
+    IEnumerator BecomeInvulnerable()
+    {
+        forceField.SetActive(true);
+        yield return new WaitForSeconds(10);
+        forceField.SetActive(false);
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PlayerBullet"))
@@ -144,12 +157,12 @@ public class YellowBossController : MonoBehaviour
         ParticleSystem ps = Instantiate(explosion, position, Quaternion.identity);
         ps.Play();
         StartCoroutine(waitForExplosion(ps));
-        if( health < 0 ) Destroy(gameObject);
     }
 
     private IEnumerator waitForExplosion(ParticleSystem ps)
     {
         yield return new WaitForSeconds(.25f);
         ps.Stop();
+        if (health <= 0) Destroy(gameObject);
     }
 }
