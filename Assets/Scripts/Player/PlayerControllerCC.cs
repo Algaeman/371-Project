@@ -11,10 +11,12 @@ public class PlayerControllerCC : MonoBehaviour
     [SerializeField] float _gravity = 2f;
     [SerializeField] float _gravityJumpModifier = 2f;
     [SerializeField] int maxHealth = 100;
+    [SerializeField] string[] _powerUps; //contains the names of all possible powerups. Any new powerup should be added
     public int curHealth = 100;
     public HealthBar hb;
     public Vector3 wormholePos1;
     public Vector3 wormholePos2;
+    public string powerUp = "none";
 
     CharacterController _characterController;
     Vector3 _moveDirection = Vector3.zero;
@@ -114,6 +116,13 @@ public class PlayerControllerCC : MonoBehaviour
             hb.setHealth(curHealth);
             explosion.Play();
             StartCoroutine("waitForExplosion");
+        }
+
+        if(other.CompareTag("Powerup") && powerUp == "none")
+        {
+            Debug.Log("Pickup");
+            powerUp = other.name;
+            Destroy(other);
         }
     }
 
