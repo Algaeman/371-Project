@@ -2241,12 +2241,12 @@ GameObject:
   - component: {fileID: 742204976}
   - component: {fileID: 742204975}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: ForceField
   m_TagString: forcefield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &742204974
 Transform:
   m_ObjectHideFlags: 0
