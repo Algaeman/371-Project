@@ -215,6 +215,7 @@ MonoBehaviour:
   countdown: {fileID: 0}
   powerupSpawner: {fileID: 0}
   explosion: {fileID: 2062240907113418624}
+  laserActivated: 0
   laser: {fileID: 8440873926675750983}
   shootPoint: {fileID: 568867702}
 --- !u!54 &2095854729
@@ -402,6 +403,14 @@ PrefabInstance:
     - target: {fileID: 1357030711454658231, guid: 65d4e45306cdf5c45b457f7841313f18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1357030712111468456, guid: 65d4e45306cdf5c45b457f7841313f18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1357030712111468458, guid: 65d4e45306cdf5c45b457f7841313f18, type: 3}
+      propertyPath: m_UseWorldSpace
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65d4e45306cdf5c45b457f7841313f18, type: 3}

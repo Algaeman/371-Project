@@ -17,6 +17,8 @@ TagManager:
   - BossBullet
   - Missile
   - Powerup
+  - HealthPowerup
+  - GasPowerup
   layers:
   - Default
   - TransparentFX
