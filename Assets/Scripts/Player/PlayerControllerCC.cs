@@ -13,6 +13,7 @@ public class PlayerControllerCC : MonoBehaviour
     [SerializeField] float _gravity = 2f;
     [SerializeField] float _gravityJumpModifier = 2f;
     [SerializeField] int maxHealth = 100;
+    public TrackLives lifeTracker;
     public int curHealth = 100;
      public HealthBar hb;
      public Vector3 wormholePos1;
@@ -26,6 +27,7 @@ public class PlayerControllerCC : MonoBehaviour
     
 
     void Start(){
+    lifeTracker = FindObjectOfType<TrackLives>();
     explosion.Stop();
     _characterController = GetComponent<CharacterController>();
     curHealth = maxHealth;
@@ -92,8 +94,18 @@ void OnTriggerEnter(Collider other)
             //this condition is to be changed to when # of lives reaches 0, and current condition is to be moved to a "loseLife" method
             if (curHealth <= 0)
             {
-                Debug.Log("die now");
-            SceneManager.LoadScene(17);
+                lifeTracker.numLives -= 1;
+                int numLives = lifeTracker.numLives;
+                if (numLives >= 1)
+                {
+                    Debug.Log("Lives left: " + numLives);
+                    SceneManager.LoadScene(16); //LoseLife scene
+                }
+                else
+                {
+                    Debug.Log("die now");
+                    SceneManager.LoadScene(17); //Death Screen scene
+                }
                 explosion.Play(); }
         StartCoroutine("waitForExplosion");
        

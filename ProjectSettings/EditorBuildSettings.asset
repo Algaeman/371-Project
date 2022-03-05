@@ -57,7 +57,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ForceField.unity
     guid: 0cfe01db127efab4aa96af02b86f8871
   - enabled: 1
-    path: Assets/Scenes/EndGame.unity
+    path: Assets/Scenes/LoseLife.unity
     guid: 7b3ae83a1c5424e2d9d563d9cb30026b
   - enabled: 1
     path: Assets/Scenes/Death Screen.unity
