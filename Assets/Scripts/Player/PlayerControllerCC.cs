@@ -17,14 +17,18 @@ public class PlayerControllerCC : MonoBehaviour
     public Vector3 wormholePos1;
     public Vector3 wormholePos2;
     public string powerUp = "none";
+    public Countdown countdown;
+    public PowerupSpawner powerupSpawner;
+    public AudioSource laserAudio;
 
     CharacterController _characterController;
     Vector3 _moveDirection = Vector3.zero;
     float _gravityDownBoost = 2;
 
     public ParticleSystem explosion;
-
-
+    public bool laserActivated = false;
+    public LineRenderer laser;
+    public Transform shootPoint;
     void Start()
     {
         explosion.Stop();
@@ -52,7 +56,7 @@ public class PlayerControllerCC : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 _moveDirection.y = _jumpSpeed;
-            }
+            } 
         }
 
         // Need to continually apply gravity to player
@@ -68,6 +72,23 @@ public class PlayerControllerCC : MonoBehaviour
         _characterController.Move(_moveDirection * Time.deltaTime);
     }
 
+    void LateUpdate()
+    {
+        if(laserActivated)
+        {
+            Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var mouseHit, Mathf.Infinity);
+            Vector3 direction = new Vector3(mouseHit.point.x, shootPoint.position.y ,mouseHit.point.z) - shootPoint.position;
+            Physics.Raycast(shootPoint.position, direction, out var raycastHit, Mathf.Infinity);
+            laser.SetPosition(0, shootPoint.position);
+            laser.SetPosition(1, new Vector3(raycastHit.point.x, shootPoint.position.y, raycastHit.point.z));
+            if(raycastHit.collider.gameObject.CompareTag("Enemy"))
+            {
+                EnemyAI enemy = raycastHit.collider.gameObject.GetComponent<EnemyAI>();
+                enemy.takeDamage(1);
+            }
+            
+        }
+    }
     public void takeDamage(int damage)
     {
         curHealth -= damage;
@@ -118,11 +139,29 @@ public class PlayerControllerCC : MonoBehaviour
             StartCoroutine("waitForExplosion");
         }
 
+        if (other.CompareTag("GasPowerup"))
+        {
+            countdown.currentTime = Mathf.Min(countdown.duration, countdown.currentTime + 6f);
+            powerupSpawner.powerupSpawned = false;
+        }
+        if (other.CompareTag("HealthPowerup"))
+        {
+            Debug.Log(curHealth);
+            curHealth = Mathf.Min(100, curHealth + 50);
+            hb.setHealth(curHealth);
+            powerupSpawner.powerupSpawned = false;
+            Debug.Log(curHealth);
+        }
+
         if(other.CompareTag("Powerup") && powerUp == "none")
         {
             Debug.Log("Pickup");
             powerUp = other.name;
+            laserActivated = true;
+            laser.gameObject.SetActive(true);
+            laserAudio.gameObject.SetActive(true);
             Destroy(other);
+            //powerupSpawner.powerupSpawned = false;
         }
     }
 

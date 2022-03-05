@@ -16,6 +16,10 @@ TagManager:
   - Mine
   - BossBullet
   - Missile
+  - Powerup
+  - HealthPowerup
+  - GasPowerup
+  - deadlysun
   layers:
   - Default
   - TransparentFX

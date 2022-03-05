@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
     [SerializeField] Image gas;
-    [SerializeField] float duration;
-    [SerializeField] float currentTime;
+    [SerializeField] public float duration;
+    [SerializeField] public float currentTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,6 @@ public class Countdown : MonoBehaviour
             yield return new WaitForSeconds(1f);
             currentTime--;
         }
+        SceneManager.LoadScene(16);
     }
 }
