@@ -16,6 +16,7 @@ TagManager:
   - Mine
   - BossBullet
   - Missile
+  - Powerup
   layers:
   - Default
   - TransparentFX
