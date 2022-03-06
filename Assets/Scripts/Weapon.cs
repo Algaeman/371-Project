@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,8 +18,6 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-       
         var gos = GameObject.FindGameObjectsWithTag("Enemy");
        //Debug.Log(gos.Length);
 
@@ -29,7 +25,7 @@ public class Weapon : MonoBehaviour
         {
             _direction = (raycastHit.point - _shootPoint.position).normalized;
             _direction = new Vector3(_direction.x, 0, _direction.z);
-            transform.forward = _direction;
+            //transform.forward = _direction;
         }
         if (Input.GetButtonDown("Fire1"))
             Shoot();
