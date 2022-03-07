@@ -107,6 +107,17 @@ void OnTriggerEnter (Collider other)
             
 
         }
+
+    if (other.CompareTag("PlayerMine"))
+        {
+            Debug.Log("MINE HIT");
+            Destroy(other.gameObject);
+            takeDamage(50);
+            if(curHealth < 0){
+                Destroy(gameObject);
+            }
+        
+        }
      StartCoroutine(Reset());
  }
 

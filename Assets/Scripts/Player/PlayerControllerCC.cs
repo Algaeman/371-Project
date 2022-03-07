@@ -21,6 +21,11 @@ public class PlayerControllerCC : MonoBehaviour
     public PowerupSpawner powerupSpawner;
     public AudioSource laserAudio;
 
+
+    public int mineCount = 3; 
+    [SerializeField] GameObject playerMinePrefab;
+    public bool canPlaceMine;
+
     CharacterController _characterController;
     Vector3 _moveDirection = Vector3.zero;
     float _gravityDownBoost = 2;
@@ -56,7 +61,17 @@ public class PlayerControllerCC : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 _moveDirection.y = _jumpSpeed;
+            }
+
+            if (Input.GetKeyDown(KeyCode.R)){
+              if(mineCount > 0 && canPlaceMine){
+                  placeMine();
+                  mineCount--;
+              }
+            }
+
             } 
+
         }
 
         // Need to continually apply gravity to player
@@ -172,6 +187,14 @@ public class PlayerControllerCC : MonoBehaviour
              explosion.Play();
              StartCoroutine("waitForExplosion");       
     }
+
+      void placeMine()
+    {
+
+        Vector3 placement = new Vector3(gameObject.transform.position.x, 3.5f, gameObject.transform.position.z); //had to hard code in the y 
+        var mine = Instantiate(playerMinePrefab, placement, gameObject.transform.rotation);
+    }
+
 
     IEnumerator TeleportToP2()
     {
