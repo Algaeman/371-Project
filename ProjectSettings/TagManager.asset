@@ -16,7 +16,6 @@ TagManager:
   - Mine
   - BossBullet
   - Missile
-  - PlayerMine
   - Powerup
   - HealthPowerup
   - GasPowerup
