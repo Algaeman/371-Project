@@ -11,12 +11,12 @@ public class PlayerControllerCC : MonoBehaviour
     [SerializeField] float _gravity = 2f;
     [SerializeField] float _gravityJumpModifier = 2f;
     [SerializeField] int maxHealth = 100;
-    [SerializeField] string[] _powerUps; //contains the names of all possible powerups. Any new powerup should be added
+    //[SerializeField] string[] _powerUps;
     public int curHealth = 100;
     public HealthBar hb;
     public Vector3 wormholePos1;
     public Vector3 wormholePos2;
-    public string powerUp = "none";
+    public string powerUp = null;
     public Countdown countdown;
     public PowerupSpawner powerupSpawner;
     public AudioSource laserAudio;
@@ -76,6 +76,8 @@ public class PlayerControllerCC : MonoBehaviour
     {
         if(laserActivated)
         {
+            laser.gameObject.SetActive(true);
+            laserAudio.gameObject.SetActive(true);
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var mouseHit, Mathf.Infinity);
             Vector3 direction = new Vector3(mouseHit.point.x, shootPoint.position.y ,mouseHit.point.z) - shootPoint.position;
             Physics.Raycast(shootPoint.position, direction, out var raycastHit, Mathf.Infinity);
@@ -153,13 +155,11 @@ public class PlayerControllerCC : MonoBehaviour
             Debug.Log(curHealth);
         }
 
-        if(other.CompareTag("Powerup") && powerUp == "none")
+        if(other.CompareTag("Powerup") && powerUp == null)
         {
             Debug.Log("Pickup");
             powerUp = other.name;
-            laserActivated = true;
-            laser.gameObject.SetActive(true);
-            laserAudio.gameObject.SetActive(true);
+            //laserActivated = true;
             Destroy(other);
             //powerupSpawner.powerupSpawned = false;
         }

@@ -19,13 +19,21 @@ public class ExecutePowerup : MonoBehaviour
         if (Input.GetKeyDown("e"))
         {
             Execute(Player.powerUp);
+            Player.powerUp = null;
         }
     }
 
     private void Execute(String equipped)
     {
-        if (equipped == "none"){
+        if (equipped == null){
             Debug.Log("No Powerup");
+        }
+        else if (equipped == "LaserPowerup")
+        {
+            Debug.Log("laser used");
+            Player.laser.gameObject.SetActive(true);
+            Player.laserAudio.gameObject.SetActive(true);
+            Player.laserActivated = true;
         }
         
     }
