@@ -147,8 +147,13 @@ public class EnemyAI : MonoBehaviour
 //         curHealth -= damage;
 //     }
 
-void takeDamage(int damage){
+public void takeDamage(int damage){
     curHealth -= damage; 
+    if (curHealth < 0)
+    {
+        Debug.Log("Destroyed");
+        Destroy(gameObject);
+    }
 }
 
 

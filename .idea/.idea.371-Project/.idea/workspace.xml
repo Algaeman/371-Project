@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd11190c-a493-4c8f-8360-70305bdb2be8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/PfCruiseMissile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/PfCruiseMissile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/GuidedMissle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/GuidedMissle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/MissileSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/MissileSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="fd11190c-a493-4c8f-8360-70305bdb2be8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +59,9 @@
       <updated>1646323362877</updated>
       <workItem from="1646323370997" duration="5664000" />
       <workItem from="1646333705798" duration="4244000" />
+      <workItem from="1646418956328" duration="8258000" />
+      <workItem from="1646586172777" duration="870000" />
+      <workItem from="1646587635079" duration="2041000" />
     </task>
     <servers />
   </component>

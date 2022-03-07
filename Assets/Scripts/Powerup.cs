@@ -11,13 +11,20 @@ public class Powerup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float rand = Random.value - 0.5f;
-        _yRotation = Vector3.up * (spinSpeed + rand);
+        _yRotation = Vector3.up * (spinSpeed);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Rotate(_yRotation);
+    }
+
+    void OnTriggerEnter(Collider other) 
+    {
+        if (other.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

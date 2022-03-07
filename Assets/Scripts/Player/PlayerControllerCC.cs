@@ -11,10 +11,15 @@ public class PlayerControllerCC : MonoBehaviour
     [SerializeField] float _gravity = 2f;
     [SerializeField] float _gravityJumpModifier = 2f;
     [SerializeField] int maxHealth = 100;
+    //[SerializeField] string[] _powerUps;
     public int curHealth = 100;
     public HealthBar hb;
     public Vector3 wormholePos1;
     public Vector3 wormholePos2;
+    public string powerUp = null;
+    public Countdown countdown;
+    public PowerupSpawner powerupSpawner;
+    public AudioSource laserAudio;
 
 
     public int mineCount = 3; 
@@ -26,8 +31,9 @@ public class PlayerControllerCC : MonoBehaviour
     float _gravityDownBoost = 2;
 
     public ParticleSystem explosion;
-
-
+    public bool laserActivated = false;
+    public LineRenderer laser;
+    public Transform shootPoint;
     void Start()
     {
         explosion.Stop();
@@ -57,12 +63,15 @@ public class PlayerControllerCC : MonoBehaviour
                 _moveDirection.y = _jumpSpeed;
             }
 
-            if (Input.GetKeyDown(KeyCode.E)){
+            if (Input.GetKeyDown(KeyCode.R)){
               if(mineCount > 0 && canPlaceMine){
                   placeMine();
                   mineCount--;
               }
             }
+
+            } 
+
         }
 
         // Need to continually apply gravity to player
@@ -78,6 +87,25 @@ public class PlayerControllerCC : MonoBehaviour
         _characterController.Move(_moveDirection * Time.deltaTime);
     }
 
+    void LateUpdate()
+    {
+        if(laserActivated)
+        {
+            laser.gameObject.SetActive(true);
+            laserAudio.gameObject.SetActive(true);
+            Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var mouseHit, Mathf.Infinity);
+            Vector3 direction = new Vector3(mouseHit.point.x, shootPoint.position.y ,mouseHit.point.z) - shootPoint.position;
+            Physics.Raycast(shootPoint.position, direction, out var raycastHit, Mathf.Infinity);
+            laser.SetPosition(0, shootPoint.position);
+            laser.SetPosition(1, new Vector3(raycastHit.point.x, shootPoint.position.y, raycastHit.point.z));
+            if(raycastHit.collider.gameObject.CompareTag("Enemy"))
+            {
+                EnemyAI enemy = raycastHit.collider.gameObject.GetComponent<EnemyAI>();
+                enemy.takeDamage(1);
+            }
+            
+        }
+    }
     public void takeDamage(int damage)
     {
         curHealth -= damage;
@@ -126,6 +154,29 @@ public class PlayerControllerCC : MonoBehaviour
             hb.setHealth(curHealth);
             explosion.Play();
             StartCoroutine("waitForExplosion");
+        }
+
+        if (other.CompareTag("GasPowerup"))
+        {
+            countdown.currentTime = Mathf.Min(countdown.duration, countdown.currentTime + 6f);
+            powerupSpawner.powerupSpawned = false;
+        }
+        if (other.CompareTag("HealthPowerup"))
+        {
+            Debug.Log(curHealth);
+            curHealth = Mathf.Min(100, curHealth + 50);
+            hb.setHealth(curHealth);
+            powerupSpawner.powerupSpawned = false;
+            Debug.Log(curHealth);
+        }
+
+        if(other.CompareTag("Powerup") && powerUp == null)
+        {
+            Debug.Log("Pickup");
+            powerUp = other.name;
+            //laserActivated = true;
+            Destroy(other);
+            //powerupSpawner.powerupSpawned = false;
         }
     }
 
