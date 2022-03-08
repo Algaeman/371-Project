@@ -180,7 +180,7 @@ public class PlayerControllerCC : MonoBehaviour
         }
     }
 
-    void HandleDestructiveCollision(int damage)
+    public void HandleDestructiveCollision(int damage)
     {
              takeDamage(damage);
              hb.setHealth(curHealth);
