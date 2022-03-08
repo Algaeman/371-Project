@@ -263,6 +263,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e453148c431efdf48881a497f9980211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &27496992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8425291209041471600, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
+  m_PrefabInstance: {fileID: 27496988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &27496993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27496990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f6335f5e8f11e42ad70a380a2c88e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forcefieldslider: {fileID: 1169986230}
+  forcefield: {fileID: 27496992}
 --- !u!1 &81584754
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,7 +3186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -523, y: -40}
+  m_AnchoredPosition: {x: -1.8928223, y: -38.279358}
   m_SizeDelta: {x: 44.8464, y: 5.157}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1169986229
