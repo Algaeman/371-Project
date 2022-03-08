@@ -5741,6 +5741,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 261030266440731984, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 261030266440731984, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8033156588540889100, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
       propertyPath: hb
       value: 
