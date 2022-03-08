@@ -3316,7 +3316,7 @@ RectTransform:
   m_GameObject: {fileID: 767334946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7603543, y: 1.7603543, z: 1.7603543}
   m_Children: []
   m_Father: {fileID: 1172917089}
   m_RootOrder: 2
@@ -3346,7 +3346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d064b747a83ad514db1b5e7144c05be6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99e91c3641a64774097d4ffb0e36d655, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6059,7 +6059,7 @@ GameObject:
   - component: {fileID: 1397073449}
   - component: {fileID: 1397073448}
   m_Layer: 5
-  m_Name: RedFill
+  m_Name: GreenFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6097,7 +6097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8862746, g: 0.054901965, b: 0.10980393, a: 1}
+  m_Color: {r: 0.05490193, g: 0.8862745, b: 0.2546169, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
