@@ -5192,7 +5192,6 @@ GameObject:
   - component: {fileID: 8033156588540889100}
   - component: {fileID: 2234296178256197184}
   - component: {fileID: 2234296178256197214}
-  - component: {fileID: 2234296178256197215}
   - component: {fileID: 2234296178909887915}
   m_Layer: 3
   m_Name: Player
@@ -5255,7 +5254,6 @@ MonoBehaviour:
   _gravity: 9.81
   _gravityJumpModifier: 4
   maxHealth: 200
-  _powerUps: []
   curHealth: 200
   hb: {fileID: 0}
   wormholePos1: {x: 0, y: 0, z: 0}
@@ -5268,6 +5266,9 @@ MonoBehaviour:
   laserActivated: 0
   laser: {fileID: 7648751077105885847}
   shootPoint: {fileID: 0}
+  mineCount: 3
+  playerMinePrefab: {fileID: 0}
+  canPlaceMine: 0
 --- !u!136 &2234296178256197184
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5299,19 +5300,6 @@ MonoBehaviour:
   _delay: 0.2
   _bulletSpeed: 25
   newGameScene: TransitionScene5
---- !u!114 &2234296178256197215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8033156588540889101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd6a97cad57d43a2ab0cff650ac6d3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameoverPanel: {fileID: 0}
 --- !u!54 &2234296178909887915
 Rigidbody:
   m_ObjectHideFlags: 0
