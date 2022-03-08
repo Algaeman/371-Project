@@ -8,9 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: e2ab214a3571b4c07a0aa7c274105423
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/GameRelatedScenes/Controls.unity
+    guid: 1fe6d091ac118104385635cf6ca425cf
   - enabled: 1
     path: Assets/Scenes/TransitionScreen1.unity
     guid: ce372db80c4aa4d399e8260e1fe474b7

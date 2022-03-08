@@ -29,6 +29,13 @@ public class PlayerControllerCC : MonoBehaviour
     public bool laserActivated = false;
     public LineRenderer laser;
     public Transform shootPoint;
+
+
+    public int mineCount = 3; 
+    [SerializeField] GameObject playerMinePrefab;
+    public bool canPlaceMine;
+
+
     void Start()
     {
         explosion.Stop();
@@ -67,6 +74,14 @@ public class PlayerControllerCC : MonoBehaviour
         {
             _moveDirection.y -= _gravityDownBoost * _gravityJumpModifier * _gravity * Time.deltaTime;
         }
+
+         if (Input.GetKeyDown(KeyCode.R)){
+              if(mineCount > 0 && canPlaceMine){
+                  placeMine();
+                  mineCount--;
+              }
+            }
+
 
         // Move the controller
         _characterController.Move(_moveDirection * Time.deltaTime);
@@ -197,4 +212,12 @@ public class PlayerControllerCC : MonoBehaviour
         yield return new WaitForSeconds(.25f);
         explosion.Stop();
     }
+
+    
+      void placeMine()
+    {
+        Vector3 placement = new Vector3(gameObject.transform.position.x, 3.5f, gameObject.transform.position.z); //had to hard code in the y 
+        var mine = Instantiate(playerMinePrefab, placement, gameObject.transform.rotation);
+    }
+
 }
