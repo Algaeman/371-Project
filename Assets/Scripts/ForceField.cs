@@ -77,6 +77,11 @@ public class ForceField : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        else if (other.tag == "forcefieldinitiator") 
+        {
+            Destroy(other.gameObject);
+            forcefieldslider.value += 3; 
+        }
     
     }
 
@@ -88,5 +93,9 @@ public class ForceField : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
+
+
+
  
 }
