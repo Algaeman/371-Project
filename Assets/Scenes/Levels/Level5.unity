@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1689,8 +1689,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!195 &359913207
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3066,8 +3069,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!195 &1055803941
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3216,8 +3222,11 @@ MonoBehaviour:
   stopFollowDistance: 10
   curHealth: 500
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!65 &1124144887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4033,9 +4042,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4682,8 +4691,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!65 &1563027118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5187,6 +5199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e453148c431efdf48881a497f9980211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupUI: {fileID: 0}
 --- !u!114 &1791761007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5201,6 +5214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forcefieldslider: {fileID: 1292856454}
   forcefield: {fileID: 1772125666}
+  max_force_field_time: 100
 --- !u!1 &1846257651
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,6 +5885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forcefieldslider: {fileID: 1292856454}
   forcefield: {fileID: 742204973}
+  max_force_field_time: 100
 --- !u!136 &2095854736
 CapsuleCollider:
   m_ObjectHideFlags: 0

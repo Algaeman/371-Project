@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ForceField : MonoBehaviour
 {
-
     float startTime; 
     float elapsedTime; 
     float totalTime = 100f;
