@@ -813,7 +813,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "W - Up\nS - Down\nA - Left\nD - Rightf\nMouse - Aim \nMouse Right Click
+  m_text: "W - Up\nS - Down\nA - Left\nD - Right\nMouse - Aim \nMouse Right Click
     - Shoot"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
