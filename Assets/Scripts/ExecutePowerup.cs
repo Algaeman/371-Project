@@ -24,7 +24,7 @@ public class ExecutePowerup : MonoBehaviour
             powerupUI.clearPowerup();
         }
 
-        if (Player.laserActivated == true && (Time.time - laserStartTime > 0.2f))
+        if (Player.laserActivated == true && (Time.time - laserStartTime > 0.3f))
         {
             Player.laser.gameObject.SetActive(false);
             Player.laserAudio.gameObject.SetActive(false);
@@ -34,10 +34,11 @@ public class ExecutePowerup : MonoBehaviour
 
     private void Execute(String equipped)
     {
+        Debug.Log(equipped);
         if (equipped == "none"){
             Debug.Log("No Powerup");
         }
-        else if (equipped == "LaserPowerup")
+        else if (equipped == "LaserPowerup(Clone)")
         {
             Debug.Log("laser used");
             Player.laser.gameObject.SetActive(true);

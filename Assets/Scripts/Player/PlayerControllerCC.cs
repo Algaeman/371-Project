@@ -167,14 +167,14 @@ public class PlayerControllerCC : MonoBehaviour
         if (other.CompareTag("GasPowerup"))
         {
             countdown.currentTime = Mathf.Min(countdown.duration, countdown.currentTime + 6f);
-            gasSpawner.powerupSpawned = false;
+            gasSpawner.reset();
         }
         if (other.CompareTag("HealthPowerup"))
         {
             Debug.Log(curHealth);
             curHealth = Mathf.Min(maxHealth, curHealth + 50);
             hb.setHealth(curHealth);
-            powerupSpawner.powerupSpawned = false;
+            powerupSpawner.reset();
             Debug.Log(curHealth);
         }
 
@@ -184,7 +184,7 @@ public class PlayerControllerCC : MonoBehaviour
             powerUp = other.name;
             powerupUI.showPowerup("laser");
             Destroy(other);
-            powerupSpawner.powerupSpawned = false;
+            powerupSpawner.reset();
         }
 
         if (other.CompareTag("MinePowerup") && powerUp == "none")
@@ -192,8 +192,7 @@ public class PlayerControllerCC : MonoBehaviour
             mineCount += 1;
             Destroy(other);
             Debug.Log(mineCount);
-            powerupSpawner.powerupSpawned = false;
-
+            powerupSpawner.reset();
         }
     }
 

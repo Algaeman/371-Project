@@ -9,7 +9,7 @@ public class PowerupSpawner : MonoBehaviour
     public List<Vector3> points;
     // Start is called before the first frame update
     public List<GameObject> powerups;
-    private float time; 
+    public float time; 
     void Start()
     {
         time = Time.time;       
@@ -26,5 +26,11 @@ public class PowerupSpawner : MonoBehaviour
             Instantiate(powerups[powerupIndex], points[pointIndex], Quaternion.identity);
             time = Time.time;
         }
+    }
+
+    public void reset()
+    {
+        time = Time.time;
+        powerupSpawned = false;
     }
 }

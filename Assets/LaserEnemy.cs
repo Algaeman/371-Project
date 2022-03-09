@@ -39,13 +39,13 @@ public class LaserEnemy : MonoBehaviour
                 startCharge = Time.time;
                 _navMeshAgent.isStopped = true;
                 transform.forward = (target.transform.position - transform.position);
-                Debug.Log("Charging");
+                //Debug.Log("Charging");
             }
 
             else if(firing == false) 
             {
                 _navMeshAgent.SetDestination(target.transform.position);
-                Debug.Log("Finding Player");
+                //Debug.Log("Finding Player");
             }
             
             if(firing == true)
@@ -58,7 +58,7 @@ public class LaserEnemy : MonoBehaviour
                 laser.SetPosition(1, new Vector3(raycastHit.point.x, transform.position.y, raycastHit.point.z));
                 if(raycastHit.collider.gameObject.CompareTag("Player"))
                 {
-                    Debug.Log("Hit player");
+                    //Debug.Log("Hit player");
                     PlayerControllerCC player = raycastHit.collider.gameObject.GetComponent<PlayerControllerCC>();
                     player.HandleDestructiveCollision(1);
                 }
@@ -69,7 +69,7 @@ public class LaserEnemy : MonoBehaviour
                     laser.gameObject.SetActive(false);
                     _navMeshAgent.isStopped = false;
                     firing = false;
-                    Debug.Log("Stopping laser");
+                    //Debug.Log("Stopping laser");
                 }
             }
         }
@@ -81,7 +81,7 @@ public class LaserEnemy : MonoBehaviour
                 charging = false;
                 firing = true;
                 startLaser = Time.time;
-                Debug.Log("Starting to fire at player");
+                //Debug.Log("Starting to fire at player");
             }
         } 
         
@@ -111,15 +111,16 @@ public class LaserEnemy : MonoBehaviour
     {
         health -= damage;
         //  Healthbar for Boss?  hb.setHealth(health);
-        ParticleSystem ps = Instantiate(_onHitEffect, position, Quaternion.identity);
-        ps.Play();
-        StartCoroutine(waitForExplosion(ps));
-    }
-
-    IEnumerator waitForExplosion(ParticleSystem ps)
-    {
-        yield return new WaitForSeconds(.25f);
-        ps.Stop();
+        // ParticleSystem ps = Instantiate(_onHitEffect, position, Quaternion.identity);
+        //ps.Play();
+        //StartCoroutine(waitForExplosion(ps));
         if( health <= 0 ) Destroy(gameObject);
     }
+
+    // IEnumerator waitForExplosion(ParticleSystem ps)
+    // {
+    //     yield return new WaitForSeconds(.25f);
+    //     ps.Stop();
+    //     if( health <= 0 ) Destroy(gameObject);
+    // }
 }

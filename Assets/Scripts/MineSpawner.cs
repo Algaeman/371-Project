@@ -15,7 +15,7 @@ public class MineSpawner : MonoBehaviour
     void Update()
     {
            Attack(); 
-           Debug.Log(_nextFire);        
+        //    Debug.Log(_nextFire);        
     }
 
    void placeMine()
@@ -29,7 +29,7 @@ public class MineSpawner : MonoBehaviour
         if (Time.time > _nextFire)
         {
             _nextFire = Time.time + _fireRate;
-            Debug.Log("In here"); 
+            //Debug.Log("In here"); 
             placeMine();
         }
     }

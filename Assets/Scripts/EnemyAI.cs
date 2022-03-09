@@ -168,6 +168,7 @@ public void takeDamage(int damage){
 //ALL ENEMY AI MUST HAVE KINEMATIC CHECKED 
 void OnTriggerEnter (Collider other)
  {
+     Debug.Log(other.tag);
      if(isColliding) return;
      isColliding = true;
      // Rest of the code
