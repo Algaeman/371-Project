@@ -15,9 +15,11 @@ public class EnemyAI : MonoBehaviour
 
     float _nextShootTime;
     [SerializeField] AIBullet _bulletPrefab;
-    //[SerializeField] Transform _shootPoint;
+    [SerializeField] Transform _shootPoint;
     [SerializeField] float _delay = 0.2f;
     [SerializeField] float _bulletSpeed = 5f;
+    public ParticleSystem _onHitEffect;
+    public ParticleSystem _deathExplosion;
     Vector3 direction;
     Vector3 bulletdirection;
     Queue<AIBullet> _pool = new Queue<AIBullet>();
@@ -27,6 +29,12 @@ public class EnemyAI : MonoBehaviour
     //          2. The player's transform is tied to playerTransform
     //              - Player gameobject must be in a layer labeled "Player"
     //          3. A NavMesh has already been baked
+    private void Start()
+    {
+        _onHitEffect.Stop();
+        _deathExplosion.Stop();
+    }
+
     void Update()
     {
         if (!seen) {
@@ -167,7 +175,11 @@ void OnTriggerEnter (Collider other)
         {
             Destroy(other);
             takeDamage(20);
+            _onHitEffect.Play();
+            StartCoroutine ("waitForExplosion");
             if(curHealth < 0){
+                _deathExplosion.Play();
+                StartCoroutine("waitForExplosion");
                 Destroy(gameObject);
             }
             
@@ -189,7 +201,13 @@ void OnTriggerEnter (Collider other)
      StartCoroutine(Reset());
  }
 
- IEnumerator Reset()
+    private IEnumerator waitForExplosion()
+    {
+        yield return new WaitForSeconds(.25f);
+        _onHitEffect.Stop();
+    }
+
+    IEnumerator Reset()
  {
       yield return new WaitForEndOfFrame();
       isColliding = false;
