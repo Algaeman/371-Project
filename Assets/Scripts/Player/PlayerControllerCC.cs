@@ -19,6 +19,7 @@ public class PlayerControllerCC : MonoBehaviour
     public string powerUp = "none";
     public Countdown countdown;
     public PowerupSpawner powerupSpawner;
+    public PowerupSpawner gasSpawner;
     public AudioSource laserAudio;
 
     CharacterController _characterController;
@@ -166,12 +167,12 @@ public class PlayerControllerCC : MonoBehaviour
         if (other.CompareTag("GasPowerup"))
         {
             countdown.currentTime = Mathf.Min(countdown.duration, countdown.currentTime + 6f);
-            powerupSpawner.powerupSpawned = false;
+            gasSpawner.powerupSpawned = false;
         }
         if (other.CompareTag("HealthPowerup"))
         {
             Debug.Log(curHealth);
-            curHealth = Mathf.Min(100, curHealth + 50);
+            curHealth = Mathf.Min(maxHealth, curHealth + 50);
             hb.setHealth(curHealth);
             powerupSpawner.powerupSpawned = false;
             Debug.Log(curHealth);
@@ -181,10 +182,9 @@ public class PlayerControllerCC : MonoBehaviour
         {
             Debug.Log("Pickup");
             powerUp = other.name;
-            //laserActivated = true;
             powerupUI.showPowerup("laser");
             Destroy(other);
-            //powerupSpawner.powerupSpawned = false;
+            powerupSpawner.powerupSpawned = false;
         }
 
         if (other.CompareTag("MinePowerup") && powerUp == "none")
@@ -192,6 +192,8 @@ public class PlayerControllerCC : MonoBehaviour
             mineCount += 1;
             Destroy(other);
             Debug.Log(mineCount);
+            powerupSpawner.powerupSpawned = false;
+
         }
     }
 
