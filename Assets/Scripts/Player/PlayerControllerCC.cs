@@ -16,7 +16,7 @@ public class PlayerControllerCC : MonoBehaviour
     public HealthBar hb;
     public Vector3 wormholePos1;
     public Vector3 wormholePos2;
-    public string powerUp = null;
+    public string powerUp = "none";
     public Countdown countdown;
     public PowerupSpawner powerupSpawner;
     public AudioSource laserAudio;
@@ -30,6 +30,7 @@ public class PlayerControllerCC : MonoBehaviour
     public LineRenderer laser;
     public Transform shootPoint;
 
+    public PowerupUI powerupUI;
 
     public int mineCount = 3; 
     [SerializeField] GameObject playerMinePrefab;
@@ -98,12 +99,18 @@ public class PlayerControllerCC : MonoBehaviour
             Physics.Raycast(shootPoint.position, direction, out var raycastHit, Mathf.Infinity);
             laser.SetPosition(0, shootPoint.position);
             laser.SetPosition(1, new Vector3(raycastHit.point.x, shootPoint.position.y, raycastHit.point.z));
+            // Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var mouseHit, Mathf.Infinity);
+            // Vector3 direction = new Vector3(mouseHit.point.x, transform.position.y ,mouseHit.point.z) - transform.position;
+            // Physics.Raycast(transform.position, direction, out var raycastHit, Mathf.Infinity);
+            // laser.SetPosition(0, transform.position);
+            // laser.SetPosition(1, new Vector3(raycastHit.point.x, transform.position.y, raycastHit.point.z));
             if(raycastHit.collider.gameObject.CompareTag("Enemy"))
             {
                 EnemyAI enemy = raycastHit.collider.gameObject.GetComponent<EnemyAI>();
                 enemy.takeDamage(1);
+                Debug.Log(enemy.curHealth);
             }
-            
+            Debug.Log(raycastHit.collider.gameObject.tag);
         }
     }
     public void takeDamage(int damage)
@@ -170,13 +177,21 @@ public class PlayerControllerCC : MonoBehaviour
             Debug.Log(curHealth);
         }
 
-        if(other.CompareTag("Powerup") && powerUp == null)
+        if(other.CompareTag("Powerup") && powerUp == "none")
         {
             Debug.Log("Pickup");
             powerUp = other.name;
             //laserActivated = true;
+            powerupUI.showPowerup("laser");
             Destroy(other);
             //powerupSpawner.powerupSpawned = false;
+        }
+
+        if (other.CompareTag("MinePowerup") && powerUp == "none")
+        {
+            mineCount += 1;
+            Destroy(other);
+            Debug.Log(mineCount);
         }
     }
 

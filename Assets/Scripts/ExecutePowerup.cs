@@ -6,7 +6,8 @@ using UnityEngine;
 public class ExecutePowerup : MonoBehaviour
 {
     PlayerControllerCC Player;
-
+    public PowerupUI powerupUI;
+    private float laserStartTime;
     void Start()
     {
         Player = FindObjectOfType<PlayerControllerCC>();
@@ -19,13 +20,21 @@ public class ExecutePowerup : MonoBehaviour
         if (Input.GetKeyDown("e"))
         {
             Execute(Player.powerUp);
-            Player.powerUp = null;
+            Player.powerUp = "none";
+            powerupUI.clearPowerup();
+        }
+
+        if (Player.laserActivated == true && (Time.time - laserStartTime > 0.2f))
+        {
+            Player.laser.gameObject.SetActive(false);
+            Player.laserAudio.gameObject.SetActive(false);
+            Player.laserActivated = false;
         }
     }
 
     private void Execute(String equipped)
     {
-        if (equipped == null){
+        if (equipped == "none"){
             Debug.Log("No Powerup");
         }
         else if (equipped == "LaserPowerup")
@@ -34,6 +43,7 @@ public class ExecutePowerup : MonoBehaviour
             Player.laser.gameObject.SetActive(true);
             Player.laserAudio.gameObject.SetActive(true);
             Player.laserActivated = true;
+            laserStartTime = Time.time;
         }
         
     }
