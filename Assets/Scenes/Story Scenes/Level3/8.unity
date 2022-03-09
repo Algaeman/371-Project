@@ -1092,8 +1092,8 @@ MonoBehaviour:
     \nemblem painted on. that's the deadliest gang west \nof the Mangellic ort cloud...\nyou
     better get out of here!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b18e86d5a261d4e9ab3d07cc720c96de, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: b18e86d5a261d4e9ab3d07cc720c96de, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2105,8 +2105,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b18e86d5a261d4e9ab3d07cc720c96de, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: b18e86d5a261d4e9ab3d07cc720c96de, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
