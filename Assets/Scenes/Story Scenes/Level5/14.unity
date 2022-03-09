@@ -664,8 +664,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: -110}
+  m_AnchoredPosition: {x: 0, y: -11.749994}
+  m_SizeDelta: {x: -40, y: -133.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1085336019
 MonoBehaviour:
@@ -689,8 +689,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -874,14 +874,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nThis is getting out of hand. You are definetely going to be late now.
-    \nLet's see if there are any short cuts... \n\n\"I found one\" the prince yells
-    \"the only thing is it takes us\nthrough the tenderloin. That's one of the most
-    dangerous \nsectors of in the universe\"\n\n\"We're just gonna have to take that
-    chance, if i dont get you \nhome to the king, I'm dead anyways\""
+  m_text: "\nThis is getting out of hand. You are definetely \ngoing to be late now.
+    Let's see if there are \nany short cuts... \n\n\"I found one\" the prince yells
+    \"the only thing \nis it takes us through the tenderloin. That's \none of the
+    most dangerous sectors of in \nthe universe\"\n\n\"We're just gonna have to take
+    that \nchance, if i dont get you home to the king, \nI'm dead anyways\""
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

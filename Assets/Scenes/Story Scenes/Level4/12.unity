@@ -412,13 +412,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "After a few hours of smooth sailing, you begin to get a call from an unknown
-    number. \nyou know you shouldn't answer based on what's already happened today,
-    \nbut you do anyways. \n\n\"EEEEee  eeeeee eeeeee\" blasts from over the coms
-    system. It's \ndolphinese. you begin to look for you're intergalactic translator. "
+  m_text: "After a few hours of smooth sailing, you begin \nto get a call from an
+    unknown number. \nyou know you shouldn't answer based on \nwhat's already happened
+    today, \nbut you do anyways. \n\n\"EEEEee  eeeeee eeeeee\" blasts from over the
+    \ncoms system. It's dolphinese. you begin to look \nfor you're intergalactic
+    translator. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -644,8 +645,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

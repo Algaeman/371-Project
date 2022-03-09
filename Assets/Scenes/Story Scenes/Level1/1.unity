@@ -597,8 +597,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1016,12 +1016,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Last night... The emperor's son begged you to take him out to some \"space
-    clubs\". \nHe has been sheltered his whole life and you felt bad that he was
-    turning 4,800\n(the legal space drinking age) and grudgingly oblidged."
+  m_text: "Last night... The emperor's son begged you to \ntake him out to some \"space
+    clubs\". He has been \nsheltered his whole life and you felt bad that \nhe was
+    turning 4,800(the legal space drinking\n age) and grudgingly oblidged."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b18e86d5a261d4e9ab3d07cc720c96de, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: b18e86d5a261d4e9ab3d07cc720c96de, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

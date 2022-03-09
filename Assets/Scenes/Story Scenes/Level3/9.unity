@@ -517,8 +517,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1157,15 +1157,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488912, guid: a0bba650a2f3bc74296aad288c08d469, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.4
+      value: 40.8
       objectReference: {fileID: 0}
     - target: {fileID: 488912, guid: a0bba650a2f3bc74296aad288c08d469, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 47
+      value: 45.9
       objectReference: {fileID: 0}
     - target: {fileID: 488912, guid: a0bba650a2f3bc74296aad288c08d469, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.3
+      value: -27.4
       objectReference: {fileID: 0}
     - target: {fileID: 488912, guid: a0bba650a2f3bc74296aad288c08d469, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1956,15 +1956,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 499520, guid: b696a85a1bdab3d4096cfcbcc7e4fe38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: -18.1
       objectReference: {fileID: 0}
     - target: {fileID: 499520, guid: b696a85a1bdab3d4096cfcbcc7e4fe38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.1
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 499520, guid: b696a85a1bdab3d4096cfcbcc7e4fe38, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -16.6
       objectReference: {fileID: 0}
     - target: {fileID: 499520, guid: b696a85a1bdab3d4096cfcbcc7e4fe38, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2229,15 +2229,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "After 10 or so more light years, the prince begins to complain about\nhow
-    hungry he is. You quickly shut him down. you've already faced two \nhuge setbacks
-    and are starting to get worried you won't get back in time.\n\n\"Pleeeeese\"
-    he begs \"i zoogle maps'd it and zorg's universe famous donut house is only \n3
-    parsecs away\". \n\nShoot you are a sucker for zorg's donuts! you shamefully
+  m_text: "After 10 or so more light years, the prince \nbegins to complain about
+    how hungry \nhe is. You quickly shut him down. you've \nalready faced two huge
+    setbacks and are \nstarting to get worried you won't get \nback in time.\n\n\"Pleeeeese\"
+    he begs \"i zoogle maps'd it \nand zorg's universe famous donut house is only
+    \n3 parsecs away\". \n\nShoot you are a sucker for zorg's donuts! you \nshamefully
     give in.\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
