@@ -12,6 +12,7 @@ public class MineEnemyAI : MonoBehaviour
     public float stopFollowDistance = 10.0f;
     public int curHealth = 100;
     private bool isColliding = false;
+    public ParticleSystem _onHitEffect;
 
     Vector3 direction;
     Vector3 bulletdirection;
@@ -101,7 +102,9 @@ void OnTriggerEnter (Collider other)
         {
             Destroy(other);
             takeDamage(20);
-            if(curHealth < 0){
+            _onHitEffect.Play();
+            StartCoroutine("waitForExplosion");
+            if (curHealth < 0){
                 Destroy(gameObject);
             }
             
@@ -122,7 +125,14 @@ void OnTriggerEnter (Collider other)
      StartCoroutine(Reset());
  }
 
- IEnumerator Reset()
+
+    private IEnumerator waitForExplosion()
+    {
+        yield return new WaitForSeconds(.25f);
+        _onHitEffect.Stop();
+    }
+
+    IEnumerator Reset()
  {
       yield return new WaitForEndOfFrame();
       isColliding = false;

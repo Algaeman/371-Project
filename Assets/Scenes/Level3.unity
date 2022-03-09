@@ -822,6 +822,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.41
       objectReference: {fileID: 0}
+    - target: {fileID: 8875156478543978939, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
@@ -853,8 +857,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!195 &192667700
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2559,6 +2566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tanker - MinePlacer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6163730002321987601, guid: d986b0372661e634da4f32a23c2bc7b1, type: 3}
+      propertyPath: _onHitEffect
+      value: 
+      objectReference: {fileID: 1917887731}
     - target: {fileID: 6163730002321987601, guid: d986b0372661e634da4f32a23c2bc7b1, type: 3}
       propertyPath: playerTransform
       value: 
@@ -6370,6 +6381,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8875156478543978939, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
@@ -6401,8 +6416,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!195 &1532743595
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7367,6 +7385,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!198 &1917887731 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7027624250515943757, guid: d986b0372661e634da4f32a23c2bc7b1, type: 3}
+  m_PrefabInstance: {fileID: 473430804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1991469338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7570,6 +7593,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.41
       objectReference: {fileID: 0}
+    - target: {fileID: 8875156478543978939, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7478250304444824222, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 445ae37f24e704de890bbfda1fa7a39c, type: 3}
@@ -7623,8 +7650,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!65 &2023740101
 BoxCollider:
   m_ObjectHideFlags: 0

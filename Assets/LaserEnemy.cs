@@ -17,7 +17,9 @@ public class LaserEnemy : MonoBehaviour
     public LineRenderer laser;
     public AudioSource laserAudio;
     public Transform shootPoint;
+    public ParticleSystem _onHitEffect;
     Transform laserTarget;
+
 
     // Start is called before the first frame update
     void Start()
@@ -109,7 +111,7 @@ public class LaserEnemy : MonoBehaviour
     {
         health -= damage;
         //  Healthbar for Boss?  hb.setHealth(health);
-        ParticleSystem ps = Instantiate(explosion, position, Quaternion.identity);
+        ParticleSystem ps = Instantiate(_onHitEffect, position, Quaternion.identity);
         ps.Play();
         StartCoroutine(waitForExplosion(ps));
     }
