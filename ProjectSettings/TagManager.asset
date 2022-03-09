@@ -21,6 +21,7 @@ TagManager:
   - GasPowerup
   - deadlysun
   - PlayerMine
+  - MinePowerup
   layers:
   - Default
   - TransparentFX
