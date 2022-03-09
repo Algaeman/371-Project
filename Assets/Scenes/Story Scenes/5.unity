@@ -1429,7 +1429,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "phew that was a close one... now that that's over with you should get
+  m_text: "phew that was a close one... Luckily, you managed to scavange one of the
+    fallen enemies \nforcefield generators. since that's over with you should get
     \nhome. if the prince is late to dinner, the king will kill you"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}

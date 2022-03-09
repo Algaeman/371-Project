@@ -727,9 +727,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Last night... The emperor's son begged you to take him out to some \"space
-    clubs\". \nHe has been sheltered his whole life and you felt bad that he was
-    turning 4,800\n(the legal space drinking age) and grudgingly oblidged."
+  m_text: 'These attacks are getting out of hand! how is it possible to
+
+    piss
+    off this many people in one night. now you really have
+
+    to hurry home, No
+    more stops'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
