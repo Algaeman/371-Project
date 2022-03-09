@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e453148c431efdf48881a497f9980211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupUI: {fileID: 0}
 --- !u!1 &27496992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3383552176056710118, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
@@ -294,6 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forcefieldslider: {fileID: 1169986230}
   forcefield: {fileID: 27496992}
+  max_force_field_time: 100
 --- !u!4 &65445717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 408684, guid: c38c830f1a01cc2419486a2e550473ee, type: 3}
@@ -1682,8 +1684,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 20
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!65 &490201032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2532,8 +2537,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 20
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!195 &1024091352
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3292,9 +3300,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4319,8 +4327,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!195 &1729011071
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4649,6 +4660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forcefieldslider: {fileID: 1133131718}
   forcefield: {fileID: 1942410080}
+  max_force_field_time: 100
 --- !u!1 &1950502661
 GameObject:
   m_ObjectHideFlags: 0
@@ -5135,8 +5147,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 20
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!65 &2032595135
 BoxCollider:
   m_ObjectHideFlags: 0

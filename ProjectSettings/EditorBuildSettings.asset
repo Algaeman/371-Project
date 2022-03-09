@@ -77,9 +77,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story Scenes/Level4/11.unity
     guid: eab879b1d828fa74b918fc6504a726fe
-  - enabled: 1
-    path: Assets/Scenes/Story Scenes/12.unity
-    guid: 4a61879590d8a404f94dae0c65456c1d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Story Scenes/Level4/13.unity
     guid: 26f73ccb487f4468ab84c7479a964dc1
@@ -110,6 +110,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level6.unity
     guid: 04df2eccd76324bf8b3661822c58ea88
+  - enabled: 1
+    path: Assets/Scenes/GameRelatedScenes/WiningGameCutScene.unity
+    guid: 961cd4ccd0c3a4d9cbf379558cdb403c
   - enabled: 1
     path: Assets/Scenes/GameRelatedScenes/EndGame.unity
     guid: 7b3ae83a1c5424e2d9d563d9cb30026b
