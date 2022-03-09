@@ -5378,6 +5378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forcefieldslider: {fileID: 1922219888}
   forcefield: {fileID: 1319665}
+  max_force_field_time: 100
 --- !u!1001 &1623393792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6606,9 +6607,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

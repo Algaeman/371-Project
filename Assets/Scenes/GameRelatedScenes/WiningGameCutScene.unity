@@ -1555,7 +1555,7 @@ PrefabInstance:
     - target: {fileID: 2315806, guid: 410b5de8a6fad3b4491308f2a1c87efa, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b6cca299120e7b64286a9608a92754cc, type: 2}
+      objectReference: {fileID: 2100000, guid: 846afa41657c9fa42a3b4d4882a09989, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 410b5de8a6fad3b4491308f2a1c87efa, type: 3}
 --- !u!1 &691910645 stripped
@@ -1715,6 +1715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e453148c431efdf48881a497f9980211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupUI: {fileID: 0}
 --- !u!4 &796916883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8033156588540889107, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
