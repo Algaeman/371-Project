@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cameraPosition = new Vector3(playerTransform.position.x, playerTransform.position.y + 30, playerTransform.position.z);
+        cameraPosition = new Vector3(playerTransform.position.x, playerTransform.position.y +30 , playerTransform.position.z);
         transform.position = cameraPosition;
         transform.LookAt(playerTransform);
     }
