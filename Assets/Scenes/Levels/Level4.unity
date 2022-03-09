@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45142627, g: 0.5006758, b: 0.5709976, a: 1}
+  m_IndirectSpecularColor: {r: 0.4514268, g: 0.50067616, b: 0.5709989, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -531,8 +531,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!65 &168956836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -717,6 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e453148c431efdf48881a497f9980211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupUI: {fileID: 0}
 --- !u!54 &266899406
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2015,8 +2019,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!195 &571262176
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2923,6 +2930,55 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3383552176056710118, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
   m_PrefabInstance: {fileID: 1732021461}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &794004577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794004579}
+  - component: {fileID: 794004578}
+  m_Layer: 0
+  m_Name: GasSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &794004578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794004577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65e68b3e4ddb354a8af88b448c92eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupSpawned: 0
+  points:
+  - {x: 10.16, y: 3.65, z: 29.4}
+  - {x: -14.7, y: 3.65, z: -33}
+  powerups:
+  - {fileID: 2040954407201154827, guid: 880eb32fac655114bbd37da03f6de71d, type: 3}
+--- !u!4 &794004579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794004577}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 61.15166, y: 0.44792175, z: 2.1305428}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &834166965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3820,8 +3876,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!195 &1160558330
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5631,6 +5690,18 @@ PrefabInstance:
       propertyPath: hb
       value: 
       objectReference: {fileID: 1329451056}
+    - target: {fileID: 8033156588540889100, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
+      propertyPath: countdown
+      value: 
+      objectReference: {fileID: 449764101}
+    - target: {fileID: 8033156588540889100, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
+      propertyPath: gasSpawner
+      value: 
+      objectReference: {fileID: 794004578}
+    - target: {fileID: 8033156588540889100, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
+      propertyPath: powerupSpawner
+      value: 
+      objectReference: {fileID: 1932623715}
     - target: {fileID: 8033156588540889101, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5698,6 +5769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e453148c431efdf48881a497f9980211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerupUI: {fileID: 0}
 --- !u!114 &1732021464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6595,6 +6667,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26fb07eb5ea12144083c8d4510ba9b09, type: 3}
+--- !u!1 &1932623714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1932623716}
+  - component: {fileID: 1932623715}
+  m_Layer: 0
+  m_Name: PowerupSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1932623715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932623714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65e68b3e4ddb354a8af88b448c92eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerupSpawned: 0
+  points:
+  - {x: -44.4, y: 3.55, z: -10.82}
+  - {x: 42.1, y: 6.2, z: 3.6}
+  powerups:
+  - {fileID: 5197029583345457842, guid: 2993b87e138f6ba4084cbccc3db97dcb, type: 3}
+  - {fileID: 5033243846072662512, guid: 3bfe7e5cd8ebebd42b5bf783b4c27eb0, type: 3}
+--- !u!4 &1932623716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932623714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 61.15166, y: 0.44792175, z: 2.1305428}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1933164502
 GameObject:
   m_ObjectHideFlags: 0
@@ -7165,8 +7287,11 @@ MonoBehaviour:
   stopFollowDistance: 30
   curHealth: 100
   _bulletPrefab: {fileID: 9062106882702376202, guid: 32faa3bb7798fe24ebcdbad149401280, type: 3}
+  _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
+  _onHitEffect: {fileID: 0}
+  _deathExplosion: {fileID: 0}
 --- !u!195 &2035971166
 NavMeshAgent:
   m_ObjectHideFlags: 0
