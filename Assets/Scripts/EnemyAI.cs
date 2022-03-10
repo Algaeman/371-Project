@@ -174,6 +174,7 @@ void OnTriggerEnter (Collider other)
      // Rest of the code
      if (other.CompareTag("PlayerBullet"))
         {
+            Debug.Log("HIT, HP IS NOW: " + curHealth);
             Destroy(other);
             takeDamage(20);
             _onHitEffect.Play();

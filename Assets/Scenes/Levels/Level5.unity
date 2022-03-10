@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -389,6 +389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid_H (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 444136, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -495,6 +499,10 @@ PrefabInstance:
     - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_Name
       value: Asteroid_H (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 444136, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_RootOrder
@@ -623,7 +631,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &104543618
 Transform:
   m_ObjectHideFlags: 0
@@ -1156,6 +1164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid_H (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 444136, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -1378,6 +1390,10 @@ PrefabInstance:
     - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_Name
       value: Asteroid_H
+      objectReference: {fileID: 0}
+    - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 444136, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_RootOrder
@@ -1760,7 +1776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &396455439
 Transform:
   m_ObjectHideFlags: 0
@@ -2016,6 +2032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid_H (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 444136, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -2143,7 +2163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &667324700
 Transform:
   m_ObjectHideFlags: 0
@@ -2554,7 +2574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &857901668
 Transform:
   m_ObjectHideFlags: 0
@@ -3225,8 +3245,8 @@ MonoBehaviour:
   _shootPoint: {fileID: 0}
   _delay: 0.2
   _bulletSpeed: 5
-  _onHitEffect: {fileID: 0}
-  _deathExplosion: {fileID: 0}
+  _onHitEffect: {fileID: 1354670234347616216, guid: f4439853fcd0eb64db64c479b48807c5, type: 3}
+  _deathExplosion: {fileID: 1354670234347616216, guid: f4439853fcd0eb64db64c479b48807c5, type: 3}
 --- !u!65 &1124144887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3235,7 +3255,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124144884}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 15.435201, y: 7.477126, z: 19.8232}
@@ -3671,7 +3691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8033156588540889107, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9
+      value: 22.7
       objectReference: {fileID: 0}
     - target: {fileID: 8033156588540889107, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4157,7 +4177,7 @@ GameObject:
   - component: {fileID: 1360505571}
   m_Layer: 0
   m_Name: MiniBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4187,6 +4207,10 @@ PrefabInstance:
     - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_Name
       value: Asteroid_H (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 444136, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_RootOrder
@@ -4390,7 +4414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1431438626
 Transform:
   m_ObjectHideFlags: 0
@@ -5276,7 +5300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1878589731
 Transform:
   m_ObjectHideFlags: 0
@@ -5307,6 +5331,10 @@ PrefabInstance:
     - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_Name
       value: Asteroid_H (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 444136, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_RootOrder
@@ -5534,7 +5562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2037114596
 Transform:
   m_ObjectHideFlags: 0
@@ -5723,6 +5751,10 @@ PrefabInstance:
     - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_Name
       value: Asteroid_H (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 103884, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 444136, guid: ece113bb09a725547ad15c6e1794fbe0, type: 3}
       propertyPath: m_RootOrder
