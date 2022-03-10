@@ -209,15 +209,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8033156588540889100, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
       propertyPath: wormholePos1.x
-      value: -16.6
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 8033156588540889100, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
       propertyPath: wormholePos1.y
-      value: 38
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 8033156588540889100, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
       propertyPath: wormholePos1.z
-      value: 37
+      value: 19.8
       objectReference: {fileID: 0}
     - target: {fileID: 8033156588540889100, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
       propertyPath: wormholePos2.x
@@ -229,7 +229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8033156588540889100, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
       propertyPath: wormholePos2.z
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8033156588540889100, guid: 0f912a18918daff49a19ad98acdfff8c, type: 3}
       propertyPath: playerMinePrefab
@@ -3931,7 +3931,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337110502}
   m_LocalRotation: {x: 0.008681227, y: 0.00024592964, z: -0.02873805, w: 0.9995493}
-  m_LocalPosition: {x: -31.7, y: 5.1, z: 27.7}
+  m_LocalPosition: {x: -2, y: 3.4, z: 20.5}
   m_LocalScale: {x: 10, y: 3, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5443,7 +5443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983941447}
   m_LocalRotation: {x: 0.008681227, y: 0.00024592964, z: -0.02873805, w: 0.9995493}
-  m_LocalPosition: {x: -16.7, y: 10.6, z: 36.9}
+  m_LocalPosition: {x: -5.9, y: 10.4, z: 18.7}
   m_LocalScale: {x: 10, y: 3, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
