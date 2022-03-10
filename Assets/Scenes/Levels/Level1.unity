@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -690,6 +690,7 @@ MonoBehaviour:
   - {x: 33, y: 3.55, z: -17}
   powerups:
   - {fileID: 5197029583345457842, guid: 2993b87e138f6ba4084cbccc3db97dcb, type: 3}
+  time: 0
 --- !u!4 &139051637
 Transform:
   m_ObjectHideFlags: 0
@@ -3032,6 +3033,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eeb1c2ea47bc7f04cb234f63e9bbf4dc, type: 3}
+--- !u!1001 &648194231
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7483408279226373580, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: LoseLifeIndex
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373581, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483408279226373583, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
+      propertyPath: m_Name
+      value: LifeTracker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 30178d32ac6763047be44f29f5a29b7d, type: 3}
 --- !u!1 &670992318 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 180238, guid: eeb1c2ea47bc7f04cb234f63e9bbf4dc, type: 3}
@@ -7415,6 +7477,7 @@ MonoBehaviour:
   - {x: 4.8, y: 3.6, z: 12}
   powerups:
   - {fileID: 2040954407201154827, guid: 880eb32fac655114bbd37da03f6de71d, type: 3}
+  time: 0
 --- !u!4 &1694258518
 Transform:
   m_ObjectHideFlags: 0

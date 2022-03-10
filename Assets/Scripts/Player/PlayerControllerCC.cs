@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /* Based on Unity documentation for CharacterController.Move */
 
@@ -13,6 +14,7 @@ public class PlayerControllerCC : MonoBehaviour
     [SerializeField] int maxHealth = 100;
     //[SerializeField] string[] _powerUps;
     public int curHealth = 100;
+    public TrackLives lifeTracker;
     public HealthBar hb;
     public Vector3 wormholePos1;
     public Vector3 wormholePos2;
@@ -42,6 +44,7 @@ public class PlayerControllerCC : MonoBehaviour
     {
         explosion.Stop();
         _characterController = GetComponent<CharacterController>();
+        lifeTracker = FindObjectOfType<TrackLives>();
         curHealth = maxHealth;
         hb.setMaxHealth(maxHealth);
     }
@@ -160,6 +163,7 @@ public class PlayerControllerCC : MonoBehaviour
             Debug.Log("Missile hit player.");
             takeDamage(10);
             hb.setHealth(curHealth);
+            isDead(curHealth);
             explosion.Play();
             StartCoroutine("waitForExplosion");
         }
@@ -200,6 +204,7 @@ public class PlayerControllerCC : MonoBehaviour
     {
              takeDamage(damage);
              hb.setHealth(curHealth);
+             isDead(curHealth);
              explosion.Play();
              StartCoroutine("waitForExplosion");       
     }
@@ -234,6 +239,25 @@ public class PlayerControllerCC : MonoBehaviour
     {
         Vector3 placement = new Vector3(gameObject.transform.position.x, 3.5f, gameObject.transform.position.z); //had to hard code in the y 
         var mine = Instantiate(playerMinePrefab, placement, gameObject.transform.rotation);
+    }
+
+    void isDead(int curHealth)
+    {
+        if (curHealth <= 0)
+        {
+            lifeTracker.numLives -= 1;
+            int numLives = lifeTracker.numLives;
+            if (numLives >= 1)
+            {
+                Debug.Log("Lives left: " + numLives);
+                SceneManager.LoadScene(29); //LoseLife scene
+            }
+            else
+            {
+                Debug.Log("die now");
+                SceneManager.LoadScene(30); //Death Screen scene
+            }
+        }
     }
 
 }
