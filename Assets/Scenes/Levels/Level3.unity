@@ -574,6 +574,7 @@ MonoBehaviour:
   - {x: 1.85, y: 3.64, z: -29.9}
   powerups:
   - {fileID: 2040954407201154827, guid: 880eb32fac655114bbd37da03f6de71d, type: 3}
+  time: 0
 --- !u!4 &93757303
 Transform:
   m_ObjectHideFlags: 0
@@ -3266,6 +3267,8 @@ MonoBehaviour:
   powerups:
   - {fileID: 5197029583345457842, guid: 2993b87e138f6ba4084cbccc3db97dcb, type: 3}
   - {fileID: 5033243846072662512, guid: 3bfe7e5cd8ebebd42b5bf783b4c27eb0, type: 3}
+  - {fileID: 9021897784370125202, guid: e9af5d29a177949b2a9598109340e3c7, type: 3}
+  time: 0
 --- !u!4 &632908987
 Transform:
   m_ObjectHideFlags: 0

@@ -79,7 +79,7 @@ public class ForceField : MonoBehaviour
         else if (other.tag == "forcefieldinitiator") 
         {
             Destroy(other.gameObject);
-            forcefieldslider.value += 3; 
+            forcefieldslider.value += 20; 
         }
     
     }
