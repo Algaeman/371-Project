@@ -32,6 +32,7 @@ public class PlayerControllerCC : MonoBehaviour
     public bool laserActivated = false;
     public LineRenderer laser;
     public Transform shootPoint;
+    public bool huangsMode = false;
 
     public PowerupUI powerupUI;
 
@@ -86,6 +87,14 @@ public class PlayerControllerCC : MonoBehaviour
                   mineCount--;
               }
             }
+         if (Input.GetKeyDown(KeyCode.H)){
+              if(huangsMode == false){
+                  huangsMode = true;
+                }else{
+                      huangsMode = false;
+                  }
+              }
+            
 
 
         // Move the controller
@@ -126,25 +135,31 @@ public class PlayerControllerCC : MonoBehaviour
     {
         if (other.CompareTag("Missile"))
         {
+            if(huangsMode == false)
             HandleDestructiveCollision(30);
         }
 
         if (other.CompareTag("BossBullet"))
         {
+            if(huangsMode == false)
             HandleDestructiveCollision(20);
         }
         
         if (other.CompareTag("Bullet"))
         {
+            if(huangsMode == false){
             Destroy(other);
             HandleDestructiveCollision(20);
+            }
         }
 
         if (other.CompareTag("Mine"))
         {
+            if(huangsMode == false){
             Debug.Log(other.gameObject);
             Destroy(other.gameObject);
             HandleDestructiveCollision(50);
+            }
         }
 
         if (other.CompareTag("Wormhole1"))
@@ -160,12 +175,14 @@ public class PlayerControllerCC : MonoBehaviour
 
         if (other.CompareTag("Missile"))
         {
+            if(huangsMode == false){
             Debug.Log("Missile hit player.");
             takeDamage(10);
             hb.setHealth(curHealth);
             isDead(curHealth);
             explosion.Play();
             StartCoroutine("waitForExplosion");
+            }
         }
 
         if (other.CompareTag("GasPowerup"))
