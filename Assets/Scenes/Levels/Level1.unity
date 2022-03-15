@@ -8077,7 +8077,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.5
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 7937f1af8db63214abae2c3122e9dde3, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: cdf9514719fc2ea47a0739b8ccff3338, type: 2}
 --- !u!4 &1846257653
 Transform:
   m_ObjectHideFlags: 0
@@ -8920,6 +8920,7 @@ GameObject:
   - component: {fileID: 1996942117}
   - component: {fileID: 1996942116}
   - component: {fileID: 1996942120}
+  - component: {fileID: 1996942119}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8992,6 +8993,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1996942119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996942115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab72847bfac99244395262a671fd3ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
+  start: 0
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  camera: {fileID: 1996942120}
 --- !u!114 &1996942120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9005,8 +9027,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 721165276}
+  shake: {fileID: 1996942119}
   smoothSpeed: 0.125
   offset: {x: 0, y: 35, z: 0}
+  newPos: {x: 0, y: 0, z: 0}
 --- !u!1 &2004708480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 170548, guid: 8ae16a70f008e674a8c7624f25c1b14d, type: 3}

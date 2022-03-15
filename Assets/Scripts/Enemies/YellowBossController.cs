@@ -14,6 +14,7 @@ public class YellowBossController : MonoBehaviour
     [SerializeField] MissileSpawner leftMissileSpawner;
     [SerializeField] ParticleSystem explosion;
     [SerializeField] GameObject forceField;
+    public Shake cameraShake;
 
     float _fullHealth;
 
@@ -43,6 +44,7 @@ public class YellowBossController : MonoBehaviour
         {
             if (_initHealthyPhase)
             {
+                cameraShake.start = true;
                 StartHealthyBehavior();
                 _initHealthyPhase = false;
             }
@@ -51,6 +53,7 @@ public class YellowBossController : MonoBehaviour
         {
             if (_initWorriedPhase)
             {
+                cameraShake.start = true;
                 StartWorriedBehavior();
                 _initWorriedPhase = false;
             }
@@ -59,6 +62,7 @@ public class YellowBossController : MonoBehaviour
         {
             if (_initDesperatePhase)
             {
+                cameraShake.start = true;
                 StartDesperateBehavior();
                 _initDesperatePhase = false;
             }
@@ -67,6 +71,7 @@ public class YellowBossController : MonoBehaviour
         {
             if (_initDyingPhase)
             {
+                cameraShake.start = true;
                 StartDyingBehavior();
                 _initDyingPhase = false;
             }
@@ -77,7 +82,6 @@ public class YellowBossController : MonoBehaviour
     void StartHealthyBehavior()
     {
         // Play entry noise?  
-        // Screen shake?
         farRightTurret.gameObject.SetActive(true);
         farLeftTurret.gameObject.SetActive(true);
     }

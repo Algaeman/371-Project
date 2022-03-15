@@ -12,7 +12,6 @@ public class PlayerControllerCC : MonoBehaviour
     [SerializeField] float _gravity = 2f;
     [SerializeField] float _gravityJumpModifier = 2f;
     [SerializeField] int maxHealth = 100;
-    //[SerializeField] string[] _powerUps;
     public int curHealth = 100;
     public TrackLives lifeTracker;
     public HealthBar hb;
@@ -52,6 +51,7 @@ public class PlayerControllerCC : MonoBehaviour
 
     void Update()
     {
+        gasOut(countdown.currentTime);
         if (_characterController.isGrounded)
         {
             // We are grounded, so recalculate
@@ -66,10 +66,10 @@ public class PlayerControllerCC : MonoBehaviour
             }
 
             // Handle jumping
-            if (Input.GetButton("Jump"))
-            {
-                _moveDirection.y = _jumpSpeed;
-            } 
+            //if (Input.GetButton("Jump"))
+            //{
+            //    _moveDirection.y = _jumpSpeed;
+            //} 
         }
 
         // Need to continually apply gravity to player
@@ -267,7 +267,26 @@ public class PlayerControllerCC : MonoBehaviour
             if (numLives >= 1)
             {
                 Debug.Log("Lives left: " + numLives);
-                SceneManager.LoadScene(29); //LoseLife scene
+                SceneManager.LoadScene(29); //LoseLifeHealth scene
+            }
+            else
+            {
+                Debug.Log("die now");
+                SceneManager.LoadScene(30); //Death Screen scene
+            }
+        }
+    }
+
+    void gasOut(float curGas)
+    {
+        if (curGas <= 0f)
+        {
+            lifeTracker.numLives -= 1;
+            int numLives = lifeTracker.numLives;
+            if (numLives >= 1)
+            {
+                Debug.Log("Lives left: " + numLives);
+                SceneManager.LoadScene(31); //LoseLifeGas scene
             }
             else
             {

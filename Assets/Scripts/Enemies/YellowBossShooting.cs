@@ -5,6 +5,7 @@ public class YellowBossShooting : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     public float bulletSpeed;
     public float shootingDelay;
+    [SerializeField] Transform target;
     //[SerializeField] float burstAmount;
 
     float _shootingTimer;
@@ -23,6 +24,7 @@ public class YellowBossShooting : MonoBehaviour
         {
             _shootingTimer = shootingDelay;
             var bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Vector3 direction = target.position;
             bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
             
             var angle = Mathf.PingPong(Time.time, 10) - 5;
